@@ -45,7 +45,8 @@ class EvidenceService:
         classification: str = "INTERNAL",
     ) -> RawArtifact:
         digest = sha256_hex(data)
-        key = f"{namespace}/{run_id or 'global'}/{digest}.json"
+        ext = {"text/csv": "csv", "text/plain": "txt"}.get(content_type, "json")
+        key = f"{namespace}/{run_id or 'global'}/{digest}.{ext}"
         uri = self.objects.put(key, data, content_type)
         with self.store.session() as s:
             if s.get(RawArtifactRow, uri) is None:

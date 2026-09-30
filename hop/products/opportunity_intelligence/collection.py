@@ -204,6 +204,7 @@ def collect_demand(ctx: RunContext) -> dict[str, Any]:
     for q in queries:
         by_lang.setdefault(q.language, []).append(q)
     counts: dict[str, int] = {}
+    retries_total = 0
     for lang, qs in sorted(by_lang.items()):
         ctx.check_controls()
         loc = market.locale_for(lang)
@@ -220,6 +221,7 @@ def collect_demand(ctx: RunContext) -> dict[str, Any]:
             provider.unit_cost_usd,
             provider.capability_id,
         )
+        retries_total += retries
         artifact = None
         if resp is not None and resp.raw is not None:
             artifact = deps.platform.evidence.persist_raw(resp.raw, run_id=ctx.run_id, namespace="raw/demand")
@@ -241,7 +243,12 @@ def collect_demand(ctx: RunContext) -> dict[str, Any]:
             )
             deps.repo.upsert_observation(obs)
             counts[status.value] = counts.get(status.value, 0) + 1
-    return {"observations": sum(counts.values()), "by_status": counts, "provider": provider.name}
+    return {
+        "observations": sum(counts.values()),
+        "by_status": counts,
+        "retries": retries_total,
+        "provider": provider.name,
+    }
 
 
 def _status(resp: ProviderResponse | None, error: str | None) -> tuple[ValueState, str | None]:
