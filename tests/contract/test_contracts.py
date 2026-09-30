@@ -101,3 +101,24 @@ def test_platform_core_is_domain_agnostic() -> None:
 def test_no_top_level_platform_package_shadows_stdlib() -> None:
     assert not (REPO_ROOT / "platform" / "__init__.py").exists()
     assert not (REPO_ROOT / "platform.py").exists()
+
+
+def test_documentation_links_resolve() -> None:
+    import re
+
+    broken = []
+    for md in [REPO_ROOT / "README.md", *(REPO_ROOT / "docs").rglob("*.md")]:
+        for target in re.findall(r"\]\(([^)#\s]+)(?:#[^)]*)?\)", md.read_text(encoding="utf-8")):
+            if not target.startswith("http") and not (md.parent / target).exists():
+                broken.append(f"{md.relative_to(REPO_ROOT)} -> {target}")
+    assert broken == []
+
+
+def test_manifest_runbooks_exist() -> None:
+    for path in [
+        *(REPO_ROOT / "hop" / "platform" / "capability_registry" / "manifests").glob("*.yaml"),
+        *(REPO_ROOT / "hop" / "products" / "opportunity_intelligence" / "capabilities").glob("*.yaml"),
+    ]:
+        runbook = (yaml.safe_load(path.read_text()).get("documentation") or {}).get("runbook")
+        if runbook:
+            assert (REPO_ROOT / runbook).exists(), f"{path.name}: {runbook}"
