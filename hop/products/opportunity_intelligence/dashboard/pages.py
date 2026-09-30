@@ -329,7 +329,7 @@ def evidence_room() -> None:
     if flash:
         (st.success if flash[0] == "ok" else st.error)(flash[1])
     st.subheader(card.title)
-    c = st.columns(5)
+    c = st.columns([1.4, 1, 1, 1.2, 1])
     c[0].metric("Status", f"{STATUS_ICON[card.status.value]} {card.status.value}")
     c[1].metric("Priority", card.priority)
     c[2].metric("Score", f"{card.score.total:.3f}")
