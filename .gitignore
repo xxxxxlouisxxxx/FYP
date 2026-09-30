@@ -9,3 +9,5 @@ var/
 .env
 build/
 dist/
+infrastructure/environments/*.env
+backups/
