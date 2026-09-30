@@ -132,10 +132,3 @@ def test_kill_switch_mid_run_then_resume_from_checkpoints(tmp_path: Path) -> Non
     restored = {s.name for s in resumed.steps if s.restored_from_checkpoint}
     assert done_before <= restored
     assert app.repo.cards(run_id=resumed.run_id)
-
-
-def test_second_market_by_configuration(tmp_path: Path) -> None:
-    app = make_app(tmp_path)
-    run = start_discovery(app.discovery_deps(), hk_request(market="SG"), force_new=True)
-    assert run.status == RunStatus.SUCCEEDED, run.error
-    assert all(c.market == "SG" for c in app.repo.cards(run_id=run.run_id))

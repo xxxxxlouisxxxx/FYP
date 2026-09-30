@@ -10,11 +10,12 @@ realistic market situations, including deliberate data problems:
 * HK trail SERP snippet + one GERP answer: prompt-injection content
 * ambiguous "On" alias usage in several answers
 
-Run: python scripts/generate_sandbox_fixtures.py
+Run: python scripts/generate_sandbox_fixtures.py [--market SG] [--out DIR]
 """
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -595,60 +596,76 @@ def write(path: Path, doc: dict) -> None:
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
-def main() -> None:
-    for market, scenarios in SCENARIOS.items():
-        en_rows: list[tuple[str, int | None, float]] = []
-        for need, sc in scenarios.items():
-            qid, kw = EN_QUERIES[need]
-            en_rows.append((kw, sc["volume"], sc["yoy"]))
-            inject = market == "HK" and need == "trail_waterproof"
-            items = serp_items(market, need, kw, sc["supply"], inject=inject)
-            error = market == "HK" and need == "vegan_sustainable"
-            write(ROOT / market / "serp" / f"{qid}.json", serp_doc(market, qid, kw, "en", items, error=error))
+def write_market(root: Path, market: str, profile: dict | None = None, scenarios: dict | None = None) -> None:
+    """Write serp/, gerp/ and demand/ fixtures for one market under ``root/<market>/``.
+
+    ``profile`` (search engine, retailers, forums, news) and ``scenarios`` (per-need volume, supply,
+    recommendations) default to the built-in HK/SG/US entries; pass both to onboard a new market.
+    """
+    if profile is not None:
+        MARKETS[market] = profile
+    scenarios = scenarios if scenarios is not None else SCENARIOS[market]
+    en_rows: list[tuple[str, int | None, float]] = []
+    for need, sc in scenarios.items():
+        qid, kw = EN_QUERIES[need]
+        en_rows.append((kw, sc["volume"], sc["yoy"]))
+        inject = market == "HK" and need == "trail_waterproof"
+        items = serp_items(market, need, kw, sc["supply"], inject=inject)
+        error = market == "HK" and need == "vegan_sustainable"
+        write(root / market / "serp" / f"{qid}.json", serp_doc(market, qid, kw, "en", items, error=error))
+        urls = [i["url"] for i in items if i["type"] == "organic"]
+        write(
+            root / market / "gerp" / f"{qid}.json",
+            {
+                "query_id": qid,
+                "market": market,
+                "answers": gerp_answers(market, need, sc, urls, inject_at=2 if inject else None),
+            },
+        )
+    if market == "HK":
+        for qid, (need, kw, vol) in EXTENDED.items():
+            en_rows.append((kw, vol, 0.1))
+            sc = dict(scenarios[need])
+            items = serp_items(market, need, kw, max(1, sc["supply"] - 1))
+            write(root / market / "serp" / f"{qid}.json", serp_doc(market, qid, kw, "en", items))
             urls = [i["url"] for i in items if i["type"] == "organic"]
             write(
-                ROOT / market / "gerp" / f"{qid}.json",
-                {
-                    "query_id": qid,
-                    "market": market,
-                    "answers": gerp_answers(market, need, sc, urls, inject_at=2 if inject else None),
-                },
+                root / market / "gerp" / f"{qid}.json",
+                {"query_id": qid, "market": market, "answers": gerp_answers(market, need, sc, urls)},
             )
-        if market == "HK":
-            for qid, (need, kw, vol) in EXTENDED.items():
-                en_rows.append((kw, vol, 0.1))
-                sc = dict(scenarios[need])
-                items = serp_items(market, need, kw, max(1, sc["supply"] - 1))
-                write(ROOT / market / "serp" / f"{qid}.json", serp_doc(market, qid, kw, "en", items))
-                urls = [i["url"] for i in items if i["type"] == "organic"]
-                write(
-                    ROOT / market / "gerp" / f"{qid}.json",
-                    {"query_id": qid, "market": market, "answers": gerp_answers(market, need, sc, urls)},
-                )
-            zh_rows = []
-            for qid, spec in ZH.items():
-                sc = scenarios[spec["need"]]
-                vol = {"q_wide_toe_box_zh": 1900, "q_humid_breathable_zh": 1600}[qid]
-                zh_rows.append((spec["keyword"], vol, 0.2))
-                items = serp_items(market, spec["need"], spec["keyword"], max(0, sc["supply"] - 1), zh=spec)
-                write(ROOT / market / "serp" / f"{qid}.json", serp_doc(market, qid, spec["keyword"], "zh_TW", items))
-                urls = [i["url"] for i in items if i["type"] == "organic"]
-                answers = [
-                    {
-                        "repeat_index": r,
-                        "model_id": "recorded-gerp-2026-09",
-                        "recorded_at": RECORDED_AT,
-                        "answer_text": spec["answers"][r % 3],
-                        "citations": urls[:1],
-                    }
-                    for r in range(5)
-                ]
-                write(ROOT / market / "gerp" / f"{qid}.json", {"query_id": qid, "market": market, "answers": answers})
-            doc = volume_doc(market, "zh_TW", zh_rows)
-            doc["_sandbox"] = {"transient_failures": 1, "note": "first attempt returns a simulated 50301 timeout"}
-            write(ROOT / market / "demand" / "search_volume_zh_TW.json", doc)
-        write(ROOT / market / "demand" / "search_volume_en.json", volume_doc(market, "en", en_rows))
-    print(f"fixtures written to {ROOT}")
+        zh_rows = []
+        for qid, spec in ZH.items():
+            sc = scenarios[spec["need"]]
+            vol = {"q_wide_toe_box_zh": 1900, "q_humid_breathable_zh": 1600}[qid]
+            zh_rows.append((spec["keyword"], vol, 0.2))
+            items = serp_items(market, spec["need"], spec["keyword"], max(0, sc["supply"] - 1), zh=spec)
+            write(root / market / "serp" / f"{qid}.json", serp_doc(market, qid, spec["keyword"], "zh_TW", items))
+            urls = [i["url"] for i in items if i["type"] == "organic"]
+            answers = [
+                {
+                    "repeat_index": r,
+                    "model_id": "recorded-gerp-2026-09",
+                    "recorded_at": RECORDED_AT,
+                    "answer_text": spec["answers"][r % 3],
+                    "citations": urls[:1],
+                }
+                for r in range(5)
+            ]
+            write(root / market / "gerp" / f"{qid}.json", {"query_id": qid, "market": market, "answers": answers})
+        doc = volume_doc(market, "zh_TW", zh_rows)
+        doc["_sandbox"] = {"transient_failures": 1, "note": "first attempt returns a simulated 50301 timeout"}
+        write(root / market / "demand" / "search_volume_zh_TW.json", doc)
+    write(root / market / "demand" / "search_volume_en.json", volume_doc(market, "en", en_rows))
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--out", type=Path, default=ROOT, help="sandbox directory to write into")
+    parser.add_argument("--market", action="append", choices=sorted(SCENARIOS), help="default: all markets")
+    args = parser.parse_args()
+    for market in args.market or SCENARIOS:
+        write_market(args.out, market)
+    print(f"fixtures written to {args.out}")
 
 
 if __name__ == "__main__":

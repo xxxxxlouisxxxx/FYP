@@ -37,8 +37,11 @@ market-specific queries, add them to `taxonomy/queries.yaml` with `markets: [MY]
 You have two options:
 
 - **Sandbox:** add recorded fixtures under `domain_packs/sports_footwear/sandbox/MY/`, using the same
-  layout as `HK/` (`serp/`, `demand/`, `gerp/`). `scripts/generate_sandbox_fixtures.py` shows the
-  expected format.
+  layout as `HK/` (`serp/`, `demand/`, `gerp/`). `write_market()` in
+  `scripts/generate_sandbox_fixtures.py` writes them from a market profile (search engine, retailers,
+  forums) and a per-need scenario table. `tests/e2e/test_market_onboarding.py` onboards MY exactly
+  this way. It asserts that the run produces MY cards, that only `markets.yaml` and `sandbox/MY/`
+  changed, and that no Python file under `hop/` changed.
 - **Real provider:** set `DATAFORSEO_LOGIN` and `DATAFORSEO_PASSWORD`. See the
   [DataForSEO runbook](../runbooks/dataforseo-serp.md).
 
