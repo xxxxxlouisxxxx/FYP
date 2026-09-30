@@ -1,0 +1,188 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-9f4bc66e6759",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "plus size hiking pants",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "plus size hiking pants",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=plus-size-hiking-pants",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 10,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Any plus size hiking pants? - LIHKG",
+       "url": "https://lihkg.com/any-plus-size-hiking-pants----lihkg",
+       "description": "Hikers in Hong Kong say local shops have few plus size hiking pants.",
+       "breadcrumb": "https://lihkg.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.chamonix.com.hk",
+       "title": "Columbia Silver Ridge Plus Plus Size Hiking Pants",
+       "url": "https://www.chamonix.com.hk/columbia-silver-ridge-plus-plus-size-hiking-pants",
+       "description": "Shop the Columbia Silver Ridge Plus with extended sizes up to 4XL in a 4-way stretch fabric.",
+       "breadcrumb": "https://www.chamonix.com.hk › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.outdoorgearlab.com",
+       "title": "The Best Plus Size Hiking Pants | OutdoorGearLab",
+       "url": "https://www.outdoorgearlab.com/the-best-plus-size-hiking-pants---outdoorgearlab",
+       "description": "We tested plus size hiking pants side by side.",
+       "breadcrumb": "https://www.outdoorgearlab.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 4,
+       "position": "left",
+       "domain": "www.hk01.com",
+       "title": "Hikers struggle to find plus size hiking pants",
+       "url": "https://www.hk01.com/hikers-struggle-to-find-plus-size-hiking-pants",
+       "description": "Choice of plus size hiking pants in Hong Kong is limited.",
+       "breadcrumb": "https://www.hk01.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.switchbacktravel.com",
+       "title": "Plus Size Hiking Pants Guide | Switchback Travel",
+       "url": "https://www.switchbacktravel.com/plus-size-hiking-pants-guide---switchback-travel",
+       "description": "Our picks after a season of testing.",
+       "breadcrumb": "https://www.switchbacktravel.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.reddit.com",
+       "title": "Plus size hiking pants - reddit",
+       "url": "https://www.reddit.com/plus-size-hiking-pants---reddit",
+       "description": "Discussion thread with 85 comments.",
+       "breadcrumb": "https://www.reddit.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.gearpatrol.com",
+       "title": "How to choose plus size hiking pants | Gear Patrol",
+       "url": "https://www.gearpatrol.com/how-to-choose-plus-size-hiking-pants---gear-patrol",
+       "description": "What to look for before you buy.",
+       "breadcrumb": "https://www.gearpatrol.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.discuss.com.hk",
+       "title": "Plus size hiking pants discussion - Discuss.com.hk",
+       "url": "https://www.discuss.com.hk/plus-size-hiking-pants-discussion---discuss-com-hk",
+       "description": "Members share where they shop.",
+       "breadcrumb": "https://www.discuss.com.hk › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.columbia.com",
+       "title": "Outdoor Clothing | Columbia Hong Kong",
+       "url": "https://www.columbia.com/outdoor-clothing---columbia-hong-kong",
+       "description": "Shop the new season.",
+       "breadcrumb": "https://www.columbia.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.chamonix.com.hk",
+       "title": "Outdoor Clothing Sale | CHAMONIX",
+       "url": "https://www.chamonix.com.hk/outdoor-clothing-sale---chamonix",
+       "description": "Members get 10% off hiking apparel.",
+       "breadcrumb": "https://www.chamonix.com.hk › outdoor",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

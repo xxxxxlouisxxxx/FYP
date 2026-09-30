@@ -80,9 +80,12 @@ hop/products/opportunity_intelligence/
                      gap_detection, counter_evidence, scoring, opportunity_lifecycle, dashboard, api
 domain_packs/sports_footwear/
                      markets, taxonomy, brands, attributes, prompts, rules, scoring, evaluation_sets, sandbox
+domain_packs/outdoor_apparel/
+                     second domain pack (proof of concept); run it with HOP_DOMAIN_PACK=outdoor-apparel
 infrastructure/      containers/Dockerfile, docker-compose.yml, backup/
 docs/                tutorials, how-to, reference, explanation, adr, runbooks
-tests/               unit, contract, policy (incl. prompt injection), e2e (pipeline, lifecycle, API, CLI, dashboard)
+tests/               unit, contract, policy (incl. prompt injection), e2e (pipeline, lifecycle, API, CLI, dashboard,
+                     market onboarding, second domain pack), integration (Postgres-only)
 ```
 
 ## Documentation (Diátaxis)
@@ -90,6 +93,7 @@ tests/               unit, contract, policy (incl. prompt injection), e2e (pipel
 - Tutorial: [first sandbox run and first Opportunity Card](docs/tutorials/first-sandbox-run.md)
 - How-to guides:
   - [add a market](docs/how-to/add-a-market.md)
+  - [add a domain pack](docs/how-to/add-a-domain-pack.md)
   - [inspect a trace, test a rule, recover a run](docs/how-to/operate-runs.md)
 - Reference:
   - [CLI](docs/reference/cli.md)

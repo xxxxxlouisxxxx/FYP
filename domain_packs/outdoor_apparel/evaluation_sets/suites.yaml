@@ -1,0 +1,18 @@
+version: 1.0.0
+suites:
+- suite_id: gerp-recommendation-v1
+  version: 1.0.0
+  task: gerp_label_extraction
+  dataset: evaluation_sets/gerp_recommendation_v1.yaml
+  partition: development
+  owner: ai-evaluation-team
+  ratchet_key: recommendation_extraction
+  description: Recommendation vs mention vs exclusion labelling of generative-engine answers, incl. injection cases.
+- suite_id: entity-resolution-v1
+  version: 1.0.0
+  task: entity_resolution
+  dataset: evaluation_sets/entity_resolution_v1.yaml
+  partition: development
+  owner: ai-evaluation-team
+  ratchet_key: entity_resolution
+  description: Brand alias resolution including ambiguous aliases that must be flagged, not merged.

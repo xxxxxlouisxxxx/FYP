@@ -1,0 +1,53 @@
+{
+ "query_id": "q_humid_rain_shell_en",
+ "market": "HK",
+ "answers": [
+  {
+   "repeat_index": 0,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "For breathable rain jackets for humid weather in Hong Kong, my top pick is the Arc'teryx Beta LT, which offers a waterproof breathable 3-layer shell with pit zips. Another good option is the Patagonia Torrentshell 3L. I would avoid the Mammut Convey Tour because it is too warm for humid summers.",
+   "citations": [
+    "https://lihkg.com/any-breathable-rain-jackets-for-humid-weather----lihkg",
+    "https://www.chamonix.com.hk/arc-teryx-beta-lt-breathable-rain-jacket"
+   ]
+  },
+  {
+   "repeat_index": 1,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "When shopping for breathable rain jackets for humid weather, check the fit and look for a waterproof breathable 3-layer shell with pit zips. Brands such as The North Face and Columbia make items in this category, but stock in Hong Kong varies, so try them on in store before buying.",
+   "citations": [
+    "https://www.outdoorgearreview.example/breathable-rain-jackets-for-humid-weather"
+   ]
+  },
+  {
+   "repeat_index": 2,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "When shopping for breathable rain jackets for humid weather, check the fit and look for a waterproof breathable 3-layer shell with pit zips. Brands such as The North Face and Columbia make items in this category, but stock in Hong Kong varies, so try them on in store before buying.",
+   "citations": [
+    "https://www.outdoorgearreview.example/breathable-rain-jackets-for-humid-weather"
+   ]
+  },
+  {
+   "repeat_index": 3,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "For breathable rain jackets for humid weather in Hong Kong, my top pick is the Arc'teryx Beta LT, which offers a waterproof breathable 3-layer shell with pit zips. Another good option is the Patagonia Torrentshell 3L. I would avoid the Mammut Convey Tour because it is too warm for humid summers.",
+   "citations": [
+    "https://lihkg.com/any-breathable-rain-jackets-for-humid-weather----lihkg",
+    "https://www.chamonix.com.hk/arc-teryx-beta-lt-breathable-rain-jacket"
+   ]
+  },
+  {
+   "repeat_index": 4,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "When shopping for breathable rain jackets for humid weather, check the fit and look for a waterproof breathable 3-layer shell with pit zips. Brands such as The North Face and Columbia make items in this category, but stock in Hong Kong varies, so try them on in store before buying.",
+   "citations": [
+    "https://www.outdoorgearreview.example/breathable-rain-jackets-for-humid-weather"
+   ]
+  }
+ ]
+}

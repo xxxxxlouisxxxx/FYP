@@ -1,0 +1,65 @@
+version: 1.0.0
+# strategic_relevance: HKTDC relevance (sourcing, trade-fair and supplier-discovery potential), 0-1.
+# feasibility: ability of HK / Asian garment suppliers to address the need, 0-1.
+needs:
+- need_id: weather_protection
+  label: {en: Weather protection, zh-Hant: 防風防雨}
+  intent_class: parent
+  strategic_relevance: 0.5
+  feasibility: 0.5
+- need_id: humid_rain_shell
+  parent: weather_protection
+  label: {en: Breathable rain jackets for humid weather, zh-Hant: 濕熱天氣透氣雨褸}
+  intent_class: commercial_investigation
+  attributes: [waterproof_breathable, ventilation]
+  match_terms: [breathable rain jacket, waterproof breathable, pit zips, rain shell]
+  strategic_relevance: 0.85
+  feasibility: 0.8
+  description: Hikers and commuters who need rain protection that does not overheat in sub-tropical summers.
+- need_id: sun_protection_hoodie
+  parent: weather_protection
+  label: {en: UPF sun-protection hoodies, zh-Hant: 防曬連帽衫}
+  intent_class: commercial_investigation
+  attributes: [upf_rated, lightweight_fabric]
+  match_terms: [UPF, sun hoodie, sun protection]
+  strategic_relevance: 0.75
+  feasibility: 0.85
+  regulatory_flags: [health_claim]
+  description: UV-protective tops; UPF claims must follow tested ratings.
+- need_id: kids_rain_suit
+  parent: weather_protection
+  label: {en: "Waterproof kids' rain suits", zh-Hant: 兒童防水雨衣套裝}
+  intent_class: commercial
+  attributes: [waterproof_breathable]
+  match_terms: [kids rain suit, children's waterproof, kids waterproof]
+  strategic_relevance: 0.6
+  feasibility: 0.8
+- need_id: travel_layers
+  label: {en: Travel layers, zh-Hant: 旅行保暖層}
+  intent_class: parent
+  strategic_relevance: 0.5
+  feasibility: 0.5
+- need_id: packable_down_travel
+  parent: travel_layers
+  label: {en: Packable down jackets for travel, zh-Hant: 輕便可收納羽絨}
+  intent_class: commercial
+  attributes: [packable, down_insulation]
+  match_terms: [packable down, ultra light down, down jacket]
+  strategic_relevance: 0.55
+  feasibility: 0.6
+- need_id: merino_base_layer
+  parent: travel_layers
+  label: {en: Merino wool base layers, zh-Hant: 美麗諾羊毛底層衣}
+  intent_class: commercial_investigation
+  attributes: [merino_wool]
+  match_terms: [merino, base layer]
+  strategic_relevance: 0.5
+  feasibility: 0.5
+- need_id: plus_size_hiking_pants
+  label: {en: Plus-size hiking pants, zh-Hant: 大碼行山褲}
+  intent_class: commercial_investigation
+  attributes: [extended_sizing, stretch_fabric]
+  match_terms: [plus size, extended sizes, plus-size hiking]
+  strategic_relevance: 0.8
+  feasibility: 0.9
+  description: Hikers who cannot find technical trousers beyond standard size runs.

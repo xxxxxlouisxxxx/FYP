@@ -21,7 +21,8 @@ hop/products/opportunity_intelligence/
   collection, normalisation, metrics, gap_detection (rules and gates), counter_evidence, scoring,
   opportunity_lifecycle (cards, review, export), evaluation, api, dashboard
 domain_packs/sports_footwear/         markets, taxonomy, brands, attributes, prompts, rules, scoring,
-                                      evaluation_sets, sandbox fixtures
+                                      evaluation_sets, sandbox fixtures (HK, SG, US)
+domain_packs/outdoor_apparel/         second-pack proof of concept (spec 2.2), same layout, HK only
 hop/bootstrap.py                      composition root; hop/cli, hop/api.py and the dashboard use it
 ```
 
@@ -90,4 +91,5 @@ hash-chained audit event.
 | Models | Deterministic mock; OpenAI-compatible adapter with egress and budget controls | Model registry, champion-challenger and shadow runs, held-out golden sets labelled by analysts |
 | Telemetry | Spans and costs stored in the database and shown in the CLI and dashboard | OTLP export to a collector with alerting (spec 11.3) |
 | Storage | SQLite, or Postgres 16 via `DATABASE_URL` (full suite and sandbox run verified with `make test-postgres`; no migration tool yet); local object store | Managed Postgres, S3-compatible object-lock storage, retention jobs |
+| Domains and markets | Two packs sharing one runtime: sports-footwear (HK, SG, US) and an outdoor-apparel proof of concept (HK). New markets and packs are onboarded through YAML and fixtures only, and tests enforce this | Per-pack release process and owners, pack-scoped RBAC, live data for the second pack |
 | Security | Egress allowlist, RBAC, redaction, injection scanning | Secrets manager, supply-chain scanning, a DLP review of exports |

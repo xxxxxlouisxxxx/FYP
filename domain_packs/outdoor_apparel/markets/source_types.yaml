@@ -1,0 +1,31 @@
+version: 1.0.0
+source_types: [manufacturer, retailer, marketplace, media, forum, health, news, other]
+rules:
+# manufacturers
+- {domain: thenorthface.com, source_type: manufacturer}
+- {domain: columbia.com, source_type: manufacturer}
+- {domain: patagonia.com, source_type: manufacturer}
+- {domain: arcteryx.com, source_type: manufacturer}
+- {domain: uniqlo.com, source_type: manufacturer}
+- {domain: mammut.com, source_type: manufacturer}
+- {domain: montbell.com, source_type: manufacturer}
+- {domain: icebreaker.com, source_type: manufacturer}
+- {domain: smartwool.com, source_type: manufacturer}
+- {domain: decathlon.com.hk, source_type: retailer}
+# retailers and marketplaces
+- {domain: hktvmall.com, source_type: marketplace}
+- {domain: zalora.com.hk, source_type: marketplace}
+- {domain: chamonix.com.hk, source_type: retailer}
+- {domain: protrek.com.hk, source_type: retailer}
+# media and reviews
+- {domain: outdoorgearlab.com, source_type: media}
+- {domain: switchbacktravel.com, source_type: media}
+- {domain: gearpatrol.com, source_type: media}
+- {domain: outdoorgearreview.example, source_type: media}
+# forums
+- {domain: reddit.com, source_type: forum}
+- {domain: lihkg.com, source_type: forum}
+- {domain: discuss.com.hk, source_type: forum}
+# health and news
+- {domain: hko.gov.hk, source_type: health}
+- {domain: hk01.com, source_type: news}

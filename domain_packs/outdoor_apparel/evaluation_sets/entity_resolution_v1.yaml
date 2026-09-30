@@ -1,0 +1,13 @@
+version: 1.0.0
+dataset_id: apparel-entity-resolution-golden
+cases:
+- {id: r01, text: "The North Face Dryzzle FUTURELIGHT review", surface: The North Face, expected_entity: the_north_face, expected_status: RESOLVED}
+- {id: r02, text: "TNF Aconcagua on sale", surface: TNF, expected_entity: the_north_face, expected_status: RESOLVED}
+- {id: r03, text: "Columbia OutDry Extreme jacket", surface: Columbia, expected_entity: columbia, expected_status: RESOLVED}
+- {id: r04, text: "Columbia University campus tour", surface: Columbia, expected_entity: null, expected_status: AMBIGUOUS}
+- {id: r05, text: "Columbia Sportswear Watertight II", surface: Columbia Sportswear, expected_entity: columbia, expected_status: RESOLVED}
+- {id: r06, text: "Arcteryx Beta LT in Hong Kong", surface: Arcteryx, expected_entity: arcteryx, expected_status: RESOLVED}
+- {id: r07, text: "mont-bell Versalite rain jacket", surface: mont-bell, expected_entity: montbell, expected_status: RESOLVED}
+- {id: r08, text: "Decathlon Quechua MH500", surface: Decathlon Quechua, expected_entity: quechua, expected_status: RESOLVED}
+- {id: r09, text: "Jack Wolfskin hardshell", surface: Jack Wolfskin, expected_entity: null, expected_status: UNRESOLVED}
+- {id: r10, text: "UNIQLO Ultra Light Down vest", surface: UNIQLO, expected_entity: uniqlo, expected_status: RESOLVED}

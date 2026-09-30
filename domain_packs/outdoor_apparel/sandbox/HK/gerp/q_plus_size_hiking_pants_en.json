@@ -1,0 +1,53 @@
+{
+ "query_id": "q_plus_size_hiking_pants_en",
+ "market": "HK",
+ "answers": [
+  {
+   "repeat_index": 0,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "For plus size hiking pants in Hong Kong, my top pick is the Columbia Silver Ridge Plus, which offers extended sizes up to 4XL in a 4-way stretch fabric. Another good option is the Quechua MH500 Plus. I would avoid the Mammut Runbold because it stops at size XL.",
+   "citations": [
+    "https://lihkg.com/any-plus-size-hiking-pants----lihkg",
+    "https://www.chamonix.com.hk/columbia-silver-ridge-plus-plus-size-hiking-pants"
+   ]
+  },
+  {
+   "repeat_index": 1,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "When shopping for plus size hiking pants, check the fit and look for extended sizes up to 4XL in a 4-way stretch fabric. Brands such as Columbia and Mammut make items in this category, but stock in Hong Kong varies, so try them on in store before buying.",
+   "citations": [
+    "https://www.outdoorgearreview.example/plus-size-hiking-pants"
+   ]
+  },
+  {
+   "repeat_index": 2,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "When shopping for plus size hiking pants, check the fit and look for extended sizes up to 4XL in a 4-way stretch fabric. Brands such as Columbia and Mammut make items in this category, but stock in Hong Kong varies, so try them on in store before buying.",
+   "citations": [
+    "https://www.outdoorgearreview.example/plus-size-hiking-pants"
+   ]
+  },
+  {
+   "repeat_index": 3,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "For plus size hiking pants in Hong Kong, my top pick is the Columbia Silver Ridge Plus, which offers extended sizes up to 4XL in a 4-way stretch fabric. Another good option is the Quechua MH500 Plus. I would avoid the Mammut Runbold because it stops at size XL.",
+   "citations": [
+    "https://lihkg.com/any-plus-size-hiking-pants----lihkg",
+    "https://www.chamonix.com.hk/columbia-silver-ridge-plus-plus-size-hiking-pants"
+   ]
+  },
+  {
+   "repeat_index": 4,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "When shopping for plus size hiking pants, check the fit and look for extended sizes up to 4XL in a 4-way stretch fabric. Brands such as Columbia and Mammut make items in this category, but stock in Hong Kong varies, so try them on in store before buying.",
+   "citations": [
+    "https://www.outdoorgearreview.example/plus-size-hiking-pants"
+   ]
+  }
+ ]
+}

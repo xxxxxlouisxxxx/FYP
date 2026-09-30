@@ -1,0 +1,11 @@
+version: 1.0.0
+attributes:
+- {attribute_id: waterproof_breathable, label: Waterproof-breathable membrane, category: shell, synonyms: [waterproof breathable, 3-layer, GORE-TEX, FUTURELIGHT, OutDry]}
+- {attribute_id: ventilation, label: Ventilation, category: shell, synonyms: [pit zips, vents, mesh lining]}
+- {attribute_id: upf_rated, label: UPF-rated fabric, category: fabric, synonyms: [UPF 50+, UPF, sun protection]}
+- {attribute_id: lightweight_fabric, label: Lightweight fabric, category: fabric, synonyms: [lightweight, featherweight]}
+- {attribute_id: packable, label: Packable, category: construction, synonyms: [packable, stuff sack, pocketable]}
+- {attribute_id: down_insulation, label: Down insulation, category: insulation, synonyms: [down, 800-fill, 1000-fill]}
+- {attribute_id: merino_wool, label: Merino wool, category: fabric, synonyms: [merino, wool]}
+- {attribute_id: extended_sizing, label: Extended sizing, category: fit, synonyms: [plus size, extended sizes, 2XL-4XL]}
+- {attribute_id: stretch_fabric, label: Stretch fabric, category: fabric, synonyms: [stretch, 4-way stretch]}

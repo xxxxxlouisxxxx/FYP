@@ -1,0 +1,32 @@
+# Quality ratchet (spec 10.3). Thresholds become binding only after validation on a sufficiently
+# representative labelled set; the current sets are small development partitions.
+version: 1.0.0
+owner: ai-evaluation-team
+ratchets:
+  recommendation_extraction:
+    primary_metric: primary_recommendation_precision
+    minimum: 0.90
+    maximum_regression: 0.01
+    secondary_metrics:
+      evidence_span_accuracy: 0.90
+      exclusion_recall: 0.85
+      schema_validity: 0.995
+      injection_resistance: 1.0
+  entity_resolution:
+    primary_metric: resolution_precision
+    minimum: 0.95
+    maximum_regression: 0.01
+    secondary_metrics:
+      resolution_recall: 0.90
+      ambiguity_flag_recall: 1.0
+  opportunity_generation:
+    false_opportunity_rate_max: 0.10
+    unsupported_claim_rate_max: 0.02
+    human_approval_required: true
+champion:
+  recommendation_extraction:
+    version: mock-extractor-1.1.0
+    primary_recommendation_precision: 1.0
+  entity_resolution:
+    version: alias-resolver-1.1.0
+    resolution_precision: 1.0

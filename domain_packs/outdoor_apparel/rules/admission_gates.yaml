@@ -1,0 +1,8 @@
+version: 1.0.0
+owner: domain-product-owner-apparel
+min_signal_families: 2
+max_entity_ambiguity_rate: 0.15
+require_counter_evidence: true
+min_sample_n: 3
+require_rule_and_score_versions: true
+critical_quality_flags: [HASH_MISMATCH, LINEAGE_BROKEN]

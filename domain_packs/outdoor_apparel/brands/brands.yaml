@@ -1,0 +1,82 @@
+version: 1.0.0
+entities:
+- entity_id: the_north_face
+  name: The North Face
+  origin: US
+  domains: [thenorthface.com]
+  products: [Dryzzle FUTURELIGHT, Aconcagua, Class V, Paramount]
+  aliases:
+  - {alias: The North Face}
+  - {alias: North Face}
+  - {alias: TNF, case_sensitive: true}
+- entity_id: columbia
+  name: Columbia Sportswear
+  origin: US
+  domains: [columbia.com]
+  products: [OutDry Extreme, Watertight II, Silver Ridge, Arcadia]
+  aliases:
+  - {alias: Columbia Sportswear}
+  - alias: Columbia
+    ambiguous: true
+    case_sensitive: true
+    context_patterns: ['^\s*(Sportswear|OutDry|Watertight|Silver Ridge|Arcadia|Omni-\w+)\b']
+- entity_id: patagonia
+  name: Patagonia
+  origin: US
+  domains: [patagonia.com]
+  products: [Torrentshell 3L, Capilene Cool, Down Sweater, Quandary]
+  aliases:
+  - {alias: Patagonia}
+- entity_id: arcteryx
+  name: Arc'teryx
+  origin: CA
+  domains: [arcteryx.com]
+  products: [Beta LT, Cerium, Gamma, Rho]
+  aliases:
+  - {alias: "Arc'teryx"}
+  - {alias: Arcteryx}
+- entity_id: uniqlo
+  name: Uniqlo
+  origin: JP
+  domains: [uniqlo.com]
+  products: [Ultra Light Down, UV Protection Pocketable Parka, HEATTECH]
+  aliases:
+  - {alias: Uniqlo}
+  - {alias: UNIQLO}
+- entity_id: quechua
+  name: Decathlon Quechua
+  origin: FR
+  domains: [decathlon.com.hk]
+  products: [MH500, MH150, NH500]
+  aliases:
+  - {alias: Quechua}
+  - {alias: Decathlon Quechua}
+- entity_id: mammut
+  name: Mammut
+  origin: CH
+  domains: [mammut.com]
+  products: [Convey Tour, Runbold, Albula]
+  aliases:
+  - {alias: Mammut}
+- entity_id: montbell
+  name: Montbell
+  origin: JP
+  domains: [montbell.com]
+  products: [Versalite, Plasma 1000, Wickron]
+  aliases:
+  - {alias: Montbell}
+  - {alias: mont-bell}
+- entity_id: icebreaker
+  name: Icebreaker
+  origin: NZ
+  domains: [icebreaker.com]
+  products: [200 Oasis, 150 Zone, 260 Tech]
+  aliases:
+  - {alias: Icebreaker}
+- entity_id: smartwool
+  name: Smartwool
+  origin: US
+  domains: [smartwool.com]
+  products: [Classic Thermal, Intraknit, Active Ultralite]
+  aliases:
+  - {alias: Smartwool}

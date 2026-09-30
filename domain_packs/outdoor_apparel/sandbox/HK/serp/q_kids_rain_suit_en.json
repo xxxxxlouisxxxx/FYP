@@ -1,0 +1,188 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-1255c99e5587",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "waterproof kids rain suit",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "waterproof kids rain suit",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=waterproof-kids-rain-suit",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 10,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "www.uniqlo.com",
+       "title": "Uniqlo Kids Pocketable Parka | Uniqlo Hong Kong",
+       "url": "https://www.uniqlo.com/uniqlo-kids-pocketable-parka---uniqlo-hong-kong",
+       "description": "The Uniqlo Kids Pocketable Parka for rainy school runs.",
+       "breadcrumb": "https://www.uniqlo.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.chamonix.com.hk",
+       "title": "Quechua MH500 Kids Kids Rain Suit",
+       "url": "https://www.chamonix.com.hk/quechua-mh500-kids-kids-rain-suit",
+       "description": "Shop the Quechua MH500 Kids with a kids waterproof one-piece with taped seams.",
+       "breadcrumb": "https://www.chamonix.com.hk › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Any waterproof kids rain suits? - LIHKG",
+       "url": "https://lihkg.com/any-waterproof-kids-rain-suits----lihkg",
+       "description": "Hikers in Hong Kong say local shops have few waterproof kids rain suits.",
+       "breadcrumb": "https://lihkg.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 4,
+       "position": "left",
+       "domain": "www.columbia.com",
+       "title": "Columbia Watertight II Kids Kids Rain Suit",
+       "url": "https://www.columbia.com/columbia-watertight-ii-kids-kids-rain-suit",
+       "description": "Shop the Columbia Watertight II Kids with a kids waterproof one-piece with taped seams.",
+       "breadcrumb": "https://www.columbia.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "Uniqlo Kids Pocketable Parka",
+       "url": "https://www.hktvmall.com/uniqlo-kids-pocketable-parka",
+       "description": "Uniqlo Kids Pocketable Parka available now.",
+       "breadcrumb": "https://www.hktvmall.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "The North Face Antora Kids Kids Rain Suit",
+       "url": "https://www.hktvmall.com/the-north-face-antora-kids-kids-rain-suit",
+       "description": "Shop the The North Face Antora Kids with a kids waterproof one-piece with taped seams.",
+       "breadcrumb": "https://www.hktvmall.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.outdoorgearlab.com",
+       "title": "The Best Waterproof Kids Rain Suits | OutdoorGearLab",
+       "url": "https://www.outdoorgearlab.com/the-best-waterproof-kids-rain-suits---outdoorgearlab",
+       "description": "We tested waterproof kids rain suits side by side.",
+       "breadcrumb": "https://www.outdoorgearlab.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.decathlon.com.hk",
+       "title": "Quechua MH500 Kids Kids Rain Suit",
+       "url": "https://www.decathlon.com.hk/quechua-mh500-kids-kids-rain-suit",
+       "description": "Shop the Quechua MH500 Kids with a kids waterproof one-piece with taped seams.",
+       "breadcrumb": "https://www.decathlon.com.hk › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.gearpatrol.com",
+       "title": "Uniqlo Kids Pocketable Parka review",
+       "url": "https://www.gearpatrol.com/uniqlo-kids-pocketable-parka-review",
+       "description": "Is the Uniqlo Kids Pocketable Parka worth it?",
+       "breadcrumb": "https://www.gearpatrol.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.hk01.com",
+       "title": "Hikers struggle to find waterproof kids rain suits",
+       "url": "https://www.hk01.com/hikers-struggle-to-find-waterproof-kids-rain-suits",
+       "description": "Choice of waterproof kids rain suits in Hong Kong is limited.",
+       "breadcrumb": "https://www.hk01.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
