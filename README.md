@@ -36,6 +36,8 @@ SQLite is the default. To use Postgres, set `DATABASE_URL=postgresql+psycopg://u
 
 To try it without a local install, run `make compose-up`. This starts the API, the dashboard,
 Postgres and Redis from `infrastructure/docker-compose.yml`.
+Set `HOP_API_PORT` / `HOP_DASHBOARD_PORT` if 8000 or 8501 are taken. For a sandbox run inside the
+stack, use `docker compose -f infrastructure/docker-compose.yml exec app hop collection run --market HK --tier A`.
 
 ## What you get
 

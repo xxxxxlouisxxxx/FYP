@@ -22,7 +22,7 @@ services:
       dockerfile: infrastructure/containers/Dockerfile
     image: hop-platform:local
     environment: *hop-env
-    ports: ["8000:8000"]
+    ports: ["${HOP_API_PORT:-8000}:8000"]
     volumes: [hop-data:/data]
     depends_on:
       postgres: {condition: service_healthy}
@@ -33,7 +33,7 @@ services:
     command: ["streamlit", "run", "hop/products/opportunity_intelligence/dashboard/app.py",
               "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
     environment: *hop-env
-    ports: ["8501:8501"]
+    ports: ["${HOP_DASHBOARD_PORT:-8501}:8501"]
     volumes: [hop-data:/data]
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=4)"]
