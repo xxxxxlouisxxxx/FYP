@@ -1,0 +1,17 @@
+capability_id: evaluation.harness
+version: 1.0.0
+kind: evaluator
+owner: ai-evaluation-team
+status: approved
+purpose: Run golden-set evaluations and compare against quality-ratchet thresholds and the champion.
+input_schema: evaluation_suite_v1
+output_schema: evaluation_run_v1
+allowed_tools: [model.invoke]
+network_policy:
+  outbound_allowlist: [api.openai.com]
+model_policy:
+  allowed_models: [mock-gerp-1, gpt-4o-mini]
+  max_input_chars: 16000
+  max_output_tokens: 800
+max_steps: 500
+max_cost_usd: 0.5

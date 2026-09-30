@@ -1,0 +1,17 @@
+capability_id: opportunity.evidence_retrieval
+version: 1.0.0
+kind: agent
+owner: domain-product-owner-footwear
+status: approved
+purpose: Retrieve supporting evidence for a gap candidate from acquired evidence only.
+input_schema: gap_candidate_v1
+output_schema: supporting_evidence_result_v1
+permissions: [evidence.read]
+allowed_tools: [evidence.search]
+evidence_classes: [DEMAND_SIGNAL, SERP_RESULT, GERP_ANSWER, GERP_CITATION]
+network_policy:
+  outbound_allowlist: []
+max_steps: 6
+max_duration_seconds: 60
+max_cost_usd: 0.0
+abstain_when: [insufficient_evidence]

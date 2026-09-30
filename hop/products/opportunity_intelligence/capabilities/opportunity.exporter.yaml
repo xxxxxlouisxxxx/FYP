@@ -1,0 +1,13 @@
+capability_id: opportunity.exporter
+version: 1.0.0
+kind: exporter
+owner: domain-product-owner-footwear
+status: approved
+purpose: Export governed Opportunity Cards (JSON/CSV) with lineage, versions and review status.
+input_schema: opportunity_card_v1
+output_schema: opportunity_export_v1
+allowed_tools: [object_store.export_write]
+network_policy:
+  outbound_allowlist: []
+max_steps: 1
+max_cost_usd: 0.0
