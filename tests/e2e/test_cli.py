@@ -81,3 +81,10 @@ def test_schema_export(runner: CliRunner, tmp_path: Path) -> None:
     code, out = invoke(runner, "schema", "export", "--out", str(tmp_path / "schemas"))
     assert code == 0, out
     assert len(list((tmp_path / "schemas").glob("*.schema.json"))) == 12
+
+
+def test_unknown_market_or_tier_fails_cleanly(runner: CliRunner) -> None:
+    code, out = invoke(runner, "collection", "run", "--market", "ZZ", "--tier", "A")
+    assert code == 1 and "market ZZ not configured" in out and "Traceback" not in out
+    code, out = invoke(runner, "collection", "run", "--market", "HK", "--tier", "Q")
+    assert code == 1 and "tier Q not configured for market HK" in out

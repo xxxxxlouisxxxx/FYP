@@ -220,7 +220,9 @@ def collection_estimate_cost(
         req = _request(market, tier, language, repeats, None, None, provider, DEFAULT_USER, None)
         deps = a.discovery_deps(provider)
         est = _estimate(deps, req)
-    except (ConfigurationError, KeyError) as exc:
+    except KeyError as exc:
+        fail(str(exc.args[0]))
+    except ConfigurationError as exc:
         fail(str(exc))
     table = Table(title=f"Cost estimate {req.market} tier {req.tier} ({deps.provider_mode})")
     for col in ("Item", "Provider", "Units", "Unit", "Unit cost USD", "Total USD", "Simulated"):
@@ -265,8 +267,12 @@ def collection_run(
     a = get_app()
     try:
         req = _request(market, tier, language, repeats, budget, budget_approver, provider, user, question)
+        if req.tier not in a.pack.market(req.market).tiers:
+            raise KeyError(f"tier {req.tier} not configured for market {req.market} in domain pack {a.pack.pack_id}")
         deps = a.discovery_deps(provider)
-    except (ConfigurationError, KeyError, ValueError) as exc:
+    except KeyError as exc:
+        fail(str(exc.args[0]))
+    except (ConfigurationError, ValueError) as exc:
         fail(str(exc))
     console.print(
         f"[bold]Starting discovery run[/] market={req.market} tier={req.tier} provider={deps.provider_mode} "
