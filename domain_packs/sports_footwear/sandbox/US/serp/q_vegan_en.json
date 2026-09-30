@@ -1,0 +1,204 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-94c89769187c",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "vegan running shoes",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "vegan running shoes",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=vegan-running-shoes",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 11,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "www.reddit.com",
+       "title": "Truly vegan running shoes? - WWW",
+       "url": "https://www.reddit.com/truly-vegan-running-shoes----www",
+       "description": "Thread: runners in the United States discuss vegan running shoes; most replies say local shops have few options.",
+       "breadcrumb": "https://www.reddit.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.runningwarehouse.com",
+       "title": "Allbirds Tree Dasher 3 Vegan Recycled Running Shoe",
+       "url": "https://www.runningwarehouse.com/allbirds-tree-dasher-3-vegan-recycled-running-shoe",
+       "description": "Shop the Allbirds Tree Dasher 3 with vegan, animal-free and recycled materials. Free delivery in the United States.",
+       "breadcrumb": "https://www.runningwarehouse.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "The Best Vegan Running Shoes | RunRepeat",
+       "url": "https://www.runrepeat.com/the-best-vegan-running-shoes---runrepeat",
+       "description": "Lab-tested guide to vegan running shoes with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best vegan running shoes?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy vegan running shoes in the United States?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.adidas.com",
+       "title": "adidas Ultraboost 5 Vegan Recycled Running Shoe",
+       "url": "https://www.adidas.com/adidas-ultraboost-5-vegan-recycled-running-shoe",
+       "description": "Shop the adidas Ultraboost 5 with vegan, animal-free and recycled materials. Free delivery in the United States.",
+       "breadcrumb": "https://www.adidas.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.nytimes.com",
+       "title": "Runners in the United States struggle to find vegan running shoes",
+       "url": "https://www.nytimes.com/runners-in-the-united-states-struggle-to-find-vegan-running-",
+       "description": "Local runners say choice of vegan running shoes is limited.",
+       "breadcrumb": "https://www.nytimes.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.zappos.com",
+       "title": "Brooks Ghost 16 Vegan Recycled Running Shoe",
+       "url": "https://www.zappos.com/brooks-ghost-16-vegan-recycled-running-shoe",
+       "description": "Shop the Brooks Ghost 16 with vegan, animal-free and recycled materials. Free delivery in the United States.",
+       "breadcrumb": "https://www.zappos.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.runnersworld.com",
+       "title": "The Best Vegan Running Shoes | Runner's World",
+       "url": "https://www.runnersworld.com/the-best-vegan-running-shoes---runner-s-world",
+       "description": "Our editors pick vegan running shoes after testing.",
+       "breadcrumb": "https://www.runnersworld.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.on.com",
+       "title": "On Cloudsurfer Next Vegan Recycled Running Shoe",
+       "url": "https://www.on.com/on-cloudsurfer-next-vegan-recycled-running-shoe",
+       "description": "Shop the On Cloudsurfer Next with vegan, animal-free and recycled materials. Free delivery in the United States.",
+       "breadcrumb": "https://www.on.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.letsrun.com",
+       "title": "Vegan running shoes - reddit",
+       "url": "https://www.letsrun.com/vegan-running-shoes---reddit",
+       "description": "Discussion thread with 120 comments.",
+       "breadcrumb": "https://www.letsrun.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.healthline.com",
+       "title": "How to choose vegan running shoes",
+       "url": "https://www.healthline.com/how-to-choose-vegan-running-shoes",
+       "description": "Expert tips on fit, cushioning and when to see a specialist.",
+       "breadcrumb": "https://www.healthline.com › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

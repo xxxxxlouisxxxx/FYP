@@ -1,0 +1,58 @@
+version: 1.0.0
+source_types: [manufacturer, retailer, marketplace, media, forum, health, news, other]
+rules:
+# manufacturers
+- {domain: altrarunning.com, source_type: manufacturer}
+- {domain: hoka.com, source_type: manufacturer}
+- {domain: brooksrunning.com, source_type: manufacturer}
+- {domain: asics.com, source_type: manufacturer}
+- {domain: newbalance.com, source_type: manufacturer}
+- {domain: newbalance.com.hk, source_type: manufacturer}
+- {domain: nike.com, source_type: manufacturer}
+- {domain: adidas.com, source_type: manufacturer}
+- {domain: adidas.com.hk, source_type: manufacturer}
+- {domain: saucony.com, source_type: manufacturer}
+- {domain: on.com, source_type: manufacturer}
+- {domain: salomon.com, source_type: manufacturer}
+- {domain: topoathletic.com, source_type: manufacturer}
+- {domain: mizuno.com, source_type: manufacturer}
+- {domain: lining.com, source_type: manufacturer}
+- {domain: anta.com, source_type: manufacturer}
+- {domain: allbirds.com, source_type: manufacturer}
+- {domain: skechers.com, source_type: manufacturer}
+- {domain: decathlon.com.hk, source_type: retailer}
+- {domain: decathlon.sg, source_type: retailer}
+- {domain: decathlon.com, source_type: retailer}
+# retailers and marketplaces
+- {domain: hktvmall.com, source_type: marketplace}
+- {domain: zalora.com.hk, source_type: marketplace}
+- {domain: zalora.sg, source_type: marketplace}
+- {domain: lazada.sg, source_type: marketplace}
+- {domain: amazon.com, source_type: marketplace}
+- {domain: escapade.com.hk, source_type: retailer}
+- {domain: rs-sports.com.hk, source_type: retailer}
+- {domain: runninglab.sg, source_type: retailer}
+- {domain: royalsporting.sg, source_type: retailer}
+- {domain: runningwarehouse.com, source_type: retailer}
+- {domain: zappos.com, source_type: retailer}
+- {domain: rei.com, source_type: retailer}
+- {domain: dickssportinggoods.com, source_type: retailer}
+# media and reviews
+- {domain: runrepeat.com, source_type: media}
+- {domain: runnersworld.com, source_type: media}
+- {domain: believeintherun.com, source_type: media}
+- {domain: doctorsofrunning.com, source_type: media}
+- {domain: solereview.com, source_type: media}
+# forums
+- {domain: reddit.com, source_type: forum}
+- {domain: lihkg.com, source_type: forum}
+- {domain: discuss.com.hk, source_type: forum}
+- {domain: forums.hardwarezone.com.sg, source_type: forum}
+- {domain: letsrun.com, source_type: forum}
+# health and news
+- {domain: healthline.com, source_type: health}
+- {domain: mayoclinic.org, source_type: health}
+- {domain: verywellhealth.com, source_type: health}
+- {domain: hk01.com, source_type: news}
+- {domain: straitstimes.com, source_type: news}
+- {domain: nytimes.com, source_type: news}

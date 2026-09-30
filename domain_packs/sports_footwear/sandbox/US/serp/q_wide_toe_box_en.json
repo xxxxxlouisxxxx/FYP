@@ -1,0 +1,227 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-320c8092672c",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "wide toe box running shoes",
+    "location_code": 2840,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "wide toe box running shoes",
+     "type": "organic",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/search?q=wide-toe-box-running-shoes",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "shopping"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 12,
+     "items": [
+      {
+       "type": "shopping",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "items": [
+        {
+         "type": "shopping_element",
+         "title": "Altra Torin 7",
+         "price": 129.0
+        },
+        {
+         "type": "shopping_element",
+         "title": "New Balance Fresh Foam X 880v14 Wide",
+         "price": 129.0
+        },
+        {
+         "type": "shopping_element",
+         "title": "Topo Athletic Phantom 3",
+         "price": 129.0
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "www.runningwarehouse.com",
+       "title": "Altra Torin 7 Wide Toe Box Running Shoe",
+       "url": "https://www.runningwarehouse.com/altra-torin-7-wide-toe-box-running-shoe",
+       "description": "Shop the Altra Torin 7 with a roomy wide toe box and 2E/4E widths. Free delivery in the United States.",
+       "breadcrumb": "https://www.runningwarehouse.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.reddit.com",
+       "title": "Any wide toe box running shoes recommendations? - WWW",
+       "url": "https://www.reddit.com/any-wide-toe-box-running-shoes-recommendations----www",
+       "description": "Thread: runners in the United States discuss wide toe box running shoes; most replies say local shops have few options.",
+       "breadcrumb": "https://www.reddit.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.newbalance.com",
+       "title": "New Balance Fresh Foam X 880v14 Wide Wide Toe Box Running Shoe",
+       "url": "https://www.newbalance.com/new-balance-fresh-foam-x-880v14-wide-wide-toe-box-running-sh",
+       "description": "Shop the New Balance Fresh Foam X 880v14 Wide with a roomy wide toe box and 2E/4E widths. Free delivery in the United States.",
+       "breadcrumb": "https://www.newbalance.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best wide toe box running shoes?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy wide toe box running shoes in the United States?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "Best Wide Toe Box Running Shoes (2026) | RunRepeat",
+       "url": "https://www.runrepeat.com/best-wide-toe-box-running-shoes--2026----runrepeat",
+       "description": "Lab-tested guide to wide toe box running shoes with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.zappos.com",
+       "title": "Topo Athletic Phantom 3 Wide Toe Box Running Shoe",
+       "url": "https://www.zappos.com/topo-athletic-phantom-3-wide-toe-box-running-shoe",
+       "description": "Shop the Topo Athletic Phantom 3 with a roomy wide toe box and 2E/4E widths. Free delivery in the United States.",
+       "breadcrumb": "https://www.zappos.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.brooksrunning.com",
+       "title": "Brooks Ghost 16 Wide Wide Toe Box Running Shoe",
+       "url": "https://www.brooksrunning.com/brooks-ghost-16-wide-wide-toe-box-running-shoe",
+       "description": "Shop the Brooks Ghost 16 Wide with a roomy wide toe box and 2E/4E widths. Free delivery in the United States.",
+       "breadcrumb": "https://www.brooksrunning.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.rei.com",
+       "title": "HOKA Bondi 8 Wide Wide Toe Box Running Shoe",
+       "url": "https://www.rei.com/hoka-bondi-8-wide-wide-toe-box-running-shoe",
+       "description": "Shop the HOKA Bondi 8 Wide with a roomy wide toe box and 2E/4E widths. Free delivery in the United States.",
+       "breadcrumb": "https://www.rei.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.altrarunning.com",
+       "title": "Altra Torin 7 Wide Toe Box Running Shoe",
+       "url": "https://www.altrarunning.com/altra-torin-7-wide-toe-box-running-shoe",
+       "description": "Shop the Altra Torin 7 with a roomy wide toe box and 2E/4E widths. Free delivery in the United States.",
+       "breadcrumb": "https://www.altrarunning.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.dickssportinggoods.com",
+       "title": "New Balance Fresh Foam X 880v14 Wide Wide Toe Box Running Shoe",
+       "url": "https://www.dickssportinggoods.com/new-balance-fresh-foam-x-880v14-wide-wide-toe-box-running-sh",
+       "description": "Shop the New Balance Fresh Foam X 880v14 Wide with a roomy wide toe box and 2E/4E widths. Free delivery in the United States.",
+       "breadcrumb": "https://www.dickssportinggoods.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.topoathletic.com",
+       "title": "Topo Athletic Phantom 3 Wide Toe Box Running Shoe",
+       "url": "https://www.topoathletic.com/topo-athletic-phantom-3-wide-toe-box-running-shoe",
+       "description": "Shop the Topo Athletic Phantom 3 with a roomy wide toe box and 2E/4E widths. Free delivery in the United States.",
+       "breadcrumb": "https://www.topoathletic.com › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

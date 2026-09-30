@@ -1,0 +1,227 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-3ca59a83aaef",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "affordable carbon plate running shoes",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "affordable carbon plate running shoes",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=affordable-carbon-plate-running-shoes",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "shopping"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 12,
+     "items": [
+      {
+       "type": "shopping",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "items": [
+        {
+         "type": "shopping_element",
+         "title": "Nike Vaporfly 3",
+         "price": 129.0
+        },
+        {
+         "type": "shopping_element",
+         "title": "adidas Adizero Adios Pro 4",
+         "price": 129.0
+        },
+        {
+         "type": "shopping_element",
+         "title": "ASICS Metaspeed Sky Paris",
+         "price": 129.0
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "Nike Vaporfly 3 Carbon Plate Racing Running Shoe",
+       "url": "https://www.hktvmall.com/nike-vaporfly-3-carbon-plate-racing-running-shoe",
+       "description": "Shop the Nike Vaporfly 3 with a full-length carbon plate and a lightweight foam. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.hktvmall.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Which carbon plate racer for my first marathon? - LIHKG",
+       "url": "https://lihkg.com/which-carbon-plate-racer-for-my-first-marathon----lihkg",
+       "description": "Thread: runners in Hong Kong discuss carbon plate marathon racing shoes; most replies say local shops have few options.",
+       "breadcrumb": "https://lihkg.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.adidas.com",
+       "title": "adidas Adizero Adios Pro 4 Carbon Plate Racing Running Shoe",
+       "url": "https://www.adidas.com/adidas-adizero-adios-pro-4-carbon-plate-racing-running-shoe",
+       "description": "Shop the adidas Adizero Adios Pro 4 with a full-length carbon plate and a lightweight foam. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.adidas.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best carbon plate marathon racing shoes?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy carbon plate marathon racing shoes in Hong Kong?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "Best Carbon Plate Running Shoes 2026 | RunRepeat",
+       "url": "https://www.runrepeat.com/best-carbon-plate-running-shoes-2026---runrepeat",
+       "description": "Lab-tested guide to carbon plate marathon racing shoes with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.zalora.com.hk",
+       "title": "ASICS Metaspeed Sky Paris Carbon Plate Racing Running Shoe",
+       "url": "https://www.zalora.com.hk/asics-metaspeed-sky-paris-carbon-plate-racing-running-shoe",
+       "description": "Shop the ASICS Metaspeed Sky Paris with a full-length carbon plate and a lightweight foam. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.zalora.com.hk › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.hk01.com",
+       "title": "Runners in Hong Kong struggle to find carbon plate marathon racing shoes",
+       "url": "https://www.hk01.com/runners-in-hong-kong-struggle-to-find-carbon-plate-marathon-",
+       "description": "Local runners say choice of carbon plate marathon racing shoes is limited.",
+       "breadcrumb": "https://www.hk01.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.saucony.com",
+       "title": "Saucony Endorphin Pro 4 Carbon Plate Racing Running Shoe",
+       "url": "https://www.saucony.com/saucony-endorphin-pro-4-carbon-plate-racing-running-shoe",
+       "description": "Shop the Saucony Endorphin Pro 4 with a full-length carbon plate and a lightweight foam. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.saucony.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.escapade.com.hk",
+       "title": "New Balance FuelCell SC Elite v4 Carbon Plate Racing Running Shoe",
+       "url": "https://www.escapade.com.hk/new-balance-fuelcell-sc-elite-v4-carbon-plate-racing-running",
+       "description": "Shop the New Balance FuelCell SC Elite v4 with a full-length carbon plate and a lightweight foam. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.escapade.com.hk › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.nike.com",
+       "title": "Nike Vaporfly 3 Carbon Plate Racing Running Shoe",
+       "url": "https://www.nike.com/nike-vaporfly-3-carbon-plate-racing-running-shoe",
+       "description": "Shop the Nike Vaporfly 3 with a full-length carbon plate and a lightweight foam. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.nike.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.rs-sports.com.hk",
+       "title": "adidas Adizero Adios Pro 4 Carbon Plate Racing Running Shoe",
+       "url": "https://www.rs-sports.com.hk/adidas-adizero-adios-pro-4-carbon-plate-racing-running-shoe",
+       "description": "Shop the adidas Adizero Adios Pro 4 with a full-length carbon plate and a lightweight foam. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.rs-sports.com.hk › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

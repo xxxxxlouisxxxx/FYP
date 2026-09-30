@@ -1,0 +1,204 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-a389aba4ea85",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "breathable running shoes for humid weather",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "breathable running shoes for humid weather",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=breathable-running-shoes-for-humid-weather",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 11,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Breathable running shoes for humid summers? - LIHKG",
+       "url": "https://lihkg.com/breathable-running-shoes-for-humid-summers----lihkg",
+       "description": "Thread: runners in Hong Kong discuss breathable running shoes for humid weather; most replies say local shops have few options.",
+       "breadcrumb": "https://lihkg.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "ASICS Gel-Nimbus 26 Breathable Mesh Running Shoe",
+       "url": "https://www.hktvmall.com/asics-gel-nimbus-26-breathable-mesh-running-shoe",
+       "description": "Shop the ASICS Gel-Nimbus 26 with a breathable engineered-mesh upper and quick-dry lining. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.hktvmall.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "Most Breathable Running Shoes Tested | RunRepeat",
+       "url": "https://www.runrepeat.com/most-breathable-running-shoes-tested---runrepeat",
+       "description": "Lab-tested guide to breathable running shoes for humid weather with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best breathable running shoes for humid weather?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy breathable running shoes for humid weather in Hong Kong?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.nike.com",
+       "title": "Nike Pegasus 41 Breathable Mesh Running Shoe",
+       "url": "https://www.nike.com/nike-pegasus-41-breathable-mesh-running-shoe",
+       "description": "Shop the Nike Pegasus 41 with a breathable engineered-mesh upper and quick-dry lining. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.nike.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.hk01.com",
+       "title": "Runners in Hong Kong struggle to find breathable running shoes for humid weather",
+       "url": "https://www.hk01.com/runners-in-hong-kong-struggle-to-find-breathable-running-sho",
+       "description": "Local runners say choice of breathable running shoes for humid weather is limited.",
+       "breadcrumb": "https://www.hk01.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.zalora.com.hk",
+       "title": "adidas Adizero SL2 Breathable Mesh Running Shoe",
+       "url": "https://www.zalora.com.hk/adidas-adizero-sl2-breathable-mesh-running-shoe",
+       "description": "Shop the adidas Adizero SL2 with a breathable engineered-mesh upper and quick-dry lining. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.zalora.com.hk › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.runnersworld.com",
+       "title": "Most Breathable Running Shoes Tested | Runner's World",
+       "url": "https://www.runnersworld.com/most-breathable-running-shoes-tested---runner-s-world",
+       "description": "Our editors pick breathable running shoes for humid weather after testing.",
+       "breadcrumb": "https://www.runnersworld.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.reddit.com",
+       "title": "Breathable running shoes for humid weather - reddit",
+       "url": "https://www.reddit.com/breathable-running-shoes-for-humid-weather---reddit",
+       "description": "Discussion thread with 120 comments.",
+       "breadcrumb": "https://www.reddit.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.healthline.com",
+       "title": "How to choose breathable running shoes for humid weather",
+       "url": "https://www.healthline.com/how-to-choose-breathable-running-shoes-for-humid-weather",
+       "description": "Expert tips on fit, cushioning and when to see a specialist.",
+       "breadcrumb": "https://www.healthline.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.believeintherun.com",
+       "title": "Most Breathable Running Shoes Tested - Believe in the Run",
+       "url": "https://www.believeintherun.com/most-breathable-running-shoes-tested---believe-in-the-run",
+       "description": "Detailed reviews and comparisons.",
+       "breadcrumb": "https://www.believeintherun.com › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

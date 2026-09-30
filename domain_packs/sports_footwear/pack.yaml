@@ -1,0 +1,25 @@
+pack_id: sports-footwear
+name: Sports Footwear - Running Shoes
+version: 1.0.0
+owner: domain-stewards-footwear
+description: >-
+  HKTDC sports-footwear domain pack (initial scope: running shoes). Pure configuration:
+  markets, brand/alias registry, consumer-need taxonomy, attribute ontology, collection queries,
+  source classification, governed prompts, evaluation sets and Opportunity Intelligence rules.
+platform_compat: ">=0.1,<1.0"
+files:
+  markets: markets/markets.yaml
+  sources: markets/source_types.yaml
+  entities: brands/brands.yaml
+  taxonomy: taxonomy/needs.yaml
+  queries: taxonomy/queries.yaml
+  attributes: attributes/attributes.yaml
+  prompts: prompts/prompts.yaml
+  evaluation_suites: evaluation_sets/suites.yaml
+  sandbox_fixtures: sandbox
+extensions:
+  opportunity_intelligence:
+    gap_rules: rules/gap_rules.yaml
+    admission_gates: rules/admission_gates.yaml
+    scoring: scoring/scoring_rubric.yaml
+    quality_ratchet: evaluation_sets/quality_ratchet.yaml

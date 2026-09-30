@@ -1,0 +1,15 @@
+version: 1.0.0
+queries:
+- {query_id: q_wide_toe_box_en, text: wide toe box running shoes, language: en, need_id: wide_toe_box, markets: ["*"], query_sets: [core], intent: commercial_investigation}
+- {query_id: q_humid_breathable_en, text: breathable running shoes for humid weather, language: en, need_id: humid_breathable, markets: ["*"], query_sets: [core], intent: commercial_investigation}
+- {query_id: q_plantar_fasciitis_en, text: best running shoes for plantar fasciitis, language: en, need_id: plantar_fasciitis, markets: ["*"], query_sets: [core], intent: problem_solving}
+- {query_id: q_carbon_plate_en, text: carbon plate marathon racing shoes, language: en, need_id: carbon_plate_racing, markets: ["*"], query_sets: [core], intent: commercial}
+- {query_id: q_heavy_runner_en, text: running shoes for heavy runners, language: en, need_id: heavy_runner, markets: ["*"], query_sets: [core], intent: commercial_investigation}
+- {query_id: q_trail_waterproof_en, text: waterproof trail running shoes, language: en, need_id: trail_waterproof, markets: ["*"], query_sets: [core], intent: commercial}
+- {query_id: q_vegan_en, text: vegan running shoes, language: en, need_id: vegan_sustainable, markets: ["*"], query_sets: [core], intent: commercial_investigation}
+- {query_id: q_budget_beginner_en, text: budget running shoes for beginners, language: en, need_id: budget_beginner, markets: ["*"], query_sets: [core], intent: commercial}
+- {query_id: q_flat_feet_en, text: stability running shoes for flat feet, language: en, need_id: flat_feet_stability, markets: ["*"], query_sets: [core], intent: problem_solving}
+- {query_id: q_wide_toe_box_zh, text: 闊楦跑鞋, language: zh-Hant, need_id: wide_toe_box, markets: [HK], query_sets: [core_zh], intent: commercial_investigation}
+- {query_id: q_humid_breathable_zh, text: 透氣跑鞋 夏天, language: zh-Hant, need_id: humid_breathable, markets: [HK], query_sets: [core_zh], intent: commercial_investigation}
+- {query_id: q_wide_women_en, text: womens wide running shoes, language: en, need_id: wide_toe_box, markets: [HK], query_sets: [extended], intent: commercial}
+- {query_id: q_carbon_affordable_en, text: affordable carbon plate running shoes, language: en, need_id: carbon_plate_racing, markets: [HK], query_sets: [extended], intent: commercial}

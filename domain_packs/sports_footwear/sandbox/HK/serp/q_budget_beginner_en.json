@@ -1,0 +1,204 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-df20264b7ec3",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "budget running shoes for beginners",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "budget running shoes for beginners",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=budget-running-shoes-for-beginners",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 11,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Cheap running shoes for a beginner? - LIHKG",
+       "url": "https://lihkg.com/cheap-running-shoes-for-a-beginner----lihkg",
+       "description": "Thread: runners in Hong Kong discuss budget running shoes for beginners; most replies say local shops have few options.",
+       "breadcrumb": "https://lihkg.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "Kiprun KS900 Light Affordable Beginner Running Shoe",
+       "url": "https://www.hktvmall.com/kiprun-ks900-light-affordable-beginner-running-shoe",
+       "description": "Shop the Kiprun KS900 Light with an affordable price and a forgiving cushioned ride. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.hktvmall.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "Best Budget Running Shoes Under $100 | RunRepeat",
+       "url": "https://www.runrepeat.com/best-budget-running-shoes-under--100---runrepeat",
+       "description": "Lab-tested guide to budget running shoes for beginners with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best budget running shoes for beginners?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy budget running shoes for beginners in Hong Kong?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.lining.com",
+       "title": "Li-Ning Red Hare 7 Affordable Beginner Running Shoe",
+       "url": "https://www.lining.com/li-ning-red-hare-7-affordable-beginner-running-shoe",
+       "description": "Shop the Li-Ning Red Hare 7 with an affordable price and a forgiving cushioned ride. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.lining.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.hk01.com",
+       "title": "Runners in Hong Kong struggle to find budget running shoes for beginners",
+       "url": "https://www.hk01.com/runners-in-hong-kong-struggle-to-find-budget-running-shoes-f",
+       "description": "Local runners say choice of budget running shoes for beginners is limited.",
+       "breadcrumb": "https://www.hk01.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.runnersworld.com",
+       "title": "Best Budget Running Shoes Under $100 | Runner's World",
+       "url": "https://www.runnersworld.com/best-budget-running-shoes-under--100---runner-s-world",
+       "description": "Our editors pick budget running shoes for beginners after testing.",
+       "breadcrumb": "https://www.runnersworld.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.reddit.com",
+       "title": "Budget running shoes for beginners - reddit",
+       "url": "https://www.reddit.com/budget-running-shoes-for-beginners---reddit",
+       "description": "Discussion thread with 120 comments.",
+       "breadcrumb": "https://www.reddit.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.healthline.com",
+       "title": "How to choose budget running shoes for beginners",
+       "url": "https://www.healthline.com/how-to-choose-budget-running-shoes-for-beginners",
+       "description": "Expert tips on fit, cushioning and when to see a specialist.",
+       "breadcrumb": "https://www.healthline.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.believeintherun.com",
+       "title": "Best Budget Running Shoes Under $100 - Believe in the Run",
+       "url": "https://www.believeintherun.com/best-budget-running-shoes-under--100---believe-in-the-run",
+       "description": "Detailed reviews and comparisons.",
+       "breadcrumb": "https://www.believeintherun.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.decathlon.com",
+       "title": "Men's Running Shoes | Kiprun Hong Kong",
+       "url": "https://www.decathlon.com/men-s-running-shoes---kiprun-hong-kong",
+       "description": "Explore the latest collection of running shoes.",
+       "breadcrumb": "https://www.decathlon.com › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

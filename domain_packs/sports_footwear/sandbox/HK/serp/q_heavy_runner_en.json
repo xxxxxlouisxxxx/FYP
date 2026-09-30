@@ -1,0 +1,204 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-9ed87c16073f",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "running shoes for heavy runners",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "running shoes for heavy runners",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=running-shoes-for-heavy-runners",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 11,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Shoes for heavier runners over 100kg? - LIHKG",
+       "url": "https://lihkg.com/shoes-for-heavier-runners-over-100kg----lihkg",
+       "description": "Thread: runners in Hong Kong discuss running shoes for heavy runners; most replies say local shops have few options.",
+       "breadcrumb": "https://lihkg.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "HOKA Bondi 8 Max Cushion Stability Running Shoe",
+       "url": "https://www.hktvmall.com/hoka-bondi-8-max-cushion-stability-running-shoe",
+       "description": "Shop the HOKA Bondi 8 with maximum cushioning and a stable base for heavier runners. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.hktvmall.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "Best Running Shoes for Heavy Runners | RunRepeat",
+       "url": "https://www.runrepeat.com/best-running-shoes-for-heavy-runners---runrepeat",
+       "description": "Lab-tested guide to running shoes for heavy runners with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best running shoes for heavy runners?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy running shoes for heavy runners in Hong Kong?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.brooksrunning.com",
+       "title": "Brooks Glycerin GTS 21 Max Cushion Stability Running Shoe",
+       "url": "https://www.brooksrunning.com/brooks-glycerin-gts-21-max-cushion-stability-running-shoe",
+       "description": "Shop the Brooks Glycerin GTS 21 with maximum cushioning and a stable base for heavier runners. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.brooksrunning.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.hk01.com",
+       "title": "Runners in Hong Kong struggle to find running shoes for heavy runners",
+       "url": "https://www.hk01.com/runners-in-hong-kong-struggle-to-find-running-shoes-for-heav",
+       "description": "Local runners say choice of running shoes for heavy runners is limited.",
+       "breadcrumb": "https://www.hk01.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.zalora.com.hk",
+       "title": "New Balance Fresh Foam X 1080v14 Max Cushion Stability Running Shoe",
+       "url": "https://www.zalora.com.hk/new-balance-fresh-foam-x-1080v14-max-cushion-stability-runni",
+       "description": "Shop the New Balance Fresh Foam X 1080v14 with maximum cushioning and a stable base for heavier runners. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.zalora.com.hk › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.runnersworld.com",
+       "title": "Best Running Shoes for Heavy Runners | Runner's World",
+       "url": "https://www.runnersworld.com/best-running-shoes-for-heavy-runners---runner-s-world",
+       "description": "Our editors pick running shoes for heavy runners after testing.",
+       "breadcrumb": "https://www.runnersworld.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.asics.com",
+       "title": "ASICS Gel-Nimbus 26 Max Cushion Stability Running Shoe",
+       "url": "https://www.asics.com/asics-gel-nimbus-26-max-cushion-stability-running-shoe",
+       "description": "Shop the ASICS Gel-Nimbus 26 with maximum cushioning and a stable base for heavier runners. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.asics.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.reddit.com",
+       "title": "Running shoes for heavy runners - reddit",
+       "url": "https://www.reddit.com/running-shoes-for-heavy-runners---reddit",
+       "description": "Discussion thread with 120 comments.",
+       "breadcrumb": "https://www.reddit.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.healthline.com",
+       "title": "How to choose running shoes for heavy runners",
+       "url": "https://www.healthline.com/how-to-choose-running-shoes-for-heavy-runners",
+       "description": "Expert tips on fit, cushioning and when to see a specialist.",
+       "breadcrumb": "https://www.healthline.com › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

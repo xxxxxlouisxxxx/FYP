@@ -1,0 +1,204 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-68e89b454e13",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "vegan running shoes",
+    "location_code": 2702,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "vegan running shoes",
+     "type": "organic",
+     "se_domain": "google.com.sg",
+     "location_code": 2702,
+     "language_code": "en",
+     "check_url": "https://www.google.com.sg/search?q=vegan-running-shoes",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 11,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "forums.hardwarezone.com.sg",
+       "title": "Truly vegan running shoes? - FORUMS",
+       "url": "https://forums.hardwarezone.com.sg/truly-vegan-running-shoes----forums",
+       "description": "Thread: runners in Singapore discuss vegan running shoes; most replies say local shops have few options.",
+       "breadcrumb": "https://forums.hardwarezone.com.sg › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.zalora.sg",
+       "title": "Allbirds Tree Dasher 3 Vegan Recycled Running Shoe",
+       "url": "https://www.zalora.sg/allbirds-tree-dasher-3-vegan-recycled-running-shoe",
+       "description": "Shop the Allbirds Tree Dasher 3 with vegan, animal-free and recycled materials. Free delivery in Singapore.",
+       "breadcrumb": "https://www.zalora.sg › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "The Best Vegan Running Shoes | RunRepeat",
+       "url": "https://www.runrepeat.com/the-best-vegan-running-shoes---runrepeat",
+       "description": "Lab-tested guide to vegan running shoes with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best vegan running shoes?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy vegan running shoes in Singapore?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.straitstimes.com",
+       "title": "Runners in Singapore struggle to find vegan running shoes",
+       "url": "https://www.straitstimes.com/runners-in-singapore-struggle-to-find-vegan-running-shoes",
+       "description": "Local runners say choice of vegan running shoes is limited.",
+       "breadcrumb": "https://www.straitstimes.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.runnersworld.com",
+       "title": "The Best Vegan Running Shoes | Runner's World",
+       "url": "https://www.runnersworld.com/the-best-vegan-running-shoes---runner-s-world",
+       "description": "Our editors pick vegan running shoes after testing.",
+       "breadcrumb": "https://www.runnersworld.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.reddit.com",
+       "title": "Vegan running shoes - reddit",
+       "url": "https://www.reddit.com/vegan-running-shoes---reddit",
+       "description": "Discussion thread with 120 comments.",
+       "breadcrumb": "https://www.reddit.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.healthline.com",
+       "title": "How to choose vegan running shoes",
+       "url": "https://www.healthline.com/how-to-choose-vegan-running-shoes",
+       "description": "Expert tips on fit, cushioning and when to see a specialist.",
+       "breadcrumb": "https://www.healthline.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.believeintherun.com",
+       "title": "The Best Vegan Running Shoes - Believe in the Run",
+       "url": "https://www.believeintherun.com/the-best-vegan-running-shoes---believe-in-the-run",
+       "description": "Detailed reviews and comparisons.",
+       "breadcrumb": "https://www.believeintherun.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.allbirds.com",
+       "title": "Men's Running Shoes | Allbirds Singapore",
+       "url": "https://www.allbirds.com/men-s-running-shoes---allbirds-singapore",
+       "description": "Explore the latest collection of running shoes.",
+       "breadcrumb": "https://www.allbirds.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.zalora.sg",
+       "title": "Running Shoes Sale | ZALORA",
+       "url": "https://www.zalora.sg/running-shoes-sale---zalora",
+       "description": "Shop running shoes from top brands. Members get 10% off.",
+       "breadcrumb": "https://www.zalora.sg › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

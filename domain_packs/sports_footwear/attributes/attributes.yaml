@@ -1,0 +1,16 @@
+version: 1.0.0
+attributes:
+- {attribute_id: wide_fit, label: Wide fit (2E/4E), category: fit, synonyms: [wide, 2E, 4E, extra wide, 闊楦, 闊身]}
+- {attribute_id: wide_toe_box, label: Wide toe box, category: fit, synonyms: [wide toe box, roomy toe box, foot-shaped, 寬鞋頭]}
+- {attribute_id: breathable_upper, label: Breathable engineered mesh, category: upper, synonyms: [breathable, mesh, ventilated, 透氣]}
+- {attribute_id: quick_dry, label: Quick-dry materials, category: upper, synonyms: [quick-dry, quick dry, moisture-wicking, 快乾]}
+- {attribute_id: arch_support, label: Arch support, category: support, synonyms: [arch support, supportive, orthotic-friendly]}
+- {attribute_id: max_cushioning, label: Maximum cushioning, category: midsole, synonyms: [max cushion, maximum cushioning, plush, cushioned]}
+- {attribute_id: stability, label: Stability / motion control, category: support, synonyms: [stability, guidance rails, motion control, overpronation]}
+- {attribute_id: carbon_plate, label: Carbon-fibre plate, category: midsole, synonyms: [carbon plate, carbon-plated, carbon fibre plate]}
+- {attribute_id: lightweight, label: Lightweight, category: weight, synonyms: [lightweight, light]}
+- {attribute_id: waterproof, label: Waterproof membrane, category: upper, synonyms: [waterproof, GORE-TEX, GTX, water-resistant]}
+- {attribute_id: trail_grip, label: Trail lugs / grip, category: outsole, synonyms: [lugs, grip, trail outsole]}
+- {attribute_id: vegan_materials, label: Vegan materials, category: sustainability, synonyms: [vegan, animal-free, plant-based]}
+- {attribute_id: recycled_materials, label: Recycled materials, category: sustainability, synonyms: [recycled, sustainable, eco]}
+- {attribute_id: budget_price, label: Budget price band, category: price, synonyms: [budget, affordable, cheap, under $100, value]}

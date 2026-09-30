@@ -1,0 +1,73 @@
+version: 1.0.0
+markets:
+- code: HK
+  name: Hong Kong
+  enabled: true
+  locales:
+  - locale: en-HK
+    language: en
+    provider_language_code: en
+  - locale: zh-HK
+    language: zh-Hant
+    provider_language_code: zh_TW
+  default_language: en
+  devices: [mobile, desktop]
+  default_device: mobile
+  provider_location_code: 2344
+  currency: HKD
+  timezone: Asia/Hong_Kong
+  freshness_policy_days: 30
+  demand_reference_volume: 5000
+  tiers:
+    A:
+      description: Core running-shoe needs, English + Traditional Chinese, 3 GERP repeats
+      query_sets: [core, core_zh]
+      gerp_repeats: 3
+      max_budget_usd: 5.0
+    B:
+      description: Core + extended queries, 5 GERP repeats
+      query_sets: [core, core_zh, extended]
+      gerp_repeats: 5
+      max_budget_usd: 15.0
+- code: SG
+  name: Singapore
+  enabled: true
+  locales:
+  - locale: en-SG
+    language: en
+    provider_language_code: en
+  default_language: en
+  devices: [mobile, desktop]
+  default_device: mobile
+  provider_location_code: 2702
+  currency: SGD
+  timezone: Asia/Singapore
+  freshness_policy_days: 30
+  demand_reference_volume: 4000
+  tiers:
+    A:
+      description: Core running-shoe needs, English, 3 GERP repeats
+      query_sets: [core]
+      gerp_repeats: 3
+      max_budget_usd: 5.0
+- code: US
+  name: United States
+  enabled: true
+  locales:
+  - locale: en-US
+    language: en
+    provider_language_code: en
+  default_language: en
+  devices: [mobile, desktop]
+  default_device: mobile
+  provider_location_code: 2840
+  currency: USD
+  timezone: America/New_York
+  freshness_policy_days: 30
+  demand_reference_volume: 60000
+  tiers:
+    A:
+      description: Core running-shoe needs, English, 3 GERP repeats
+      query_sets: [core]
+      gerp_repeats: 3
+      max_budget_usd: 5.0

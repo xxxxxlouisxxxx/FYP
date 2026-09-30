@@ -1,0 +1,801 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.075,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-3ea68b468567",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.075,
+   "result_count": 11,
+   "path": [
+    "v3",
+    "keywords_data",
+    "google_ads",
+    "search_volume",
+    "live"
+   ],
+   "data": {
+    "api": "keywords_data",
+    "function": "search_volume",
+    "se": "google_ads",
+    "keywords": [
+     "wide toe box running shoes",
+     "breathable running shoes for humid weather",
+     "best running shoes for plantar fasciitis",
+     "carbon plate marathon racing shoes",
+     "running shoes for heavy runners",
+     "waterproof trail running shoes",
+     "vegan running shoes",
+     "budget running shoes for beginners",
+     "stability running shoes for flat feet",
+     "womens wide running shoes",
+     "affordable carbon plate running shoes"
+    ],
+    "location_code": 2344,
+    "language_code": "en"
+   },
+   "result": [
+    {
+     "keyword": "wide toe box running shoes",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 2900,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 2900
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 2850
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 2810
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 2760
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 2710
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 2670
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 2630
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 2580
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 2540
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 2500
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 2460
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 2420
+      }
+     ]
+    },
+    {
+     "keyword": "breathable running shoes for humid weather",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 2200,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 2200
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 2170
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 2150
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 2120
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 2100
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 2080
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 2050
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 2030
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 2000
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 1980
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 1960
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 1940
+      }
+     ]
+    },
+    {
+     "keyword": "best running shoes for plantar fasciitis",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 1900,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 1900
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 1890
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 1880
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 1860
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 1850
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 1840
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 1830
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 1820
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 1800
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 1790
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 1780
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 1770
+      }
+     ]
+    },
+    {
+     "keyword": "carbon plate marathon racing shoes",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 3600,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 3600
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 3590
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 3570
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 3560
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 3540
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 3530
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 3510
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 3500
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 3480
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 3470
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 3460
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 3440
+      }
+     ]
+    },
+    {
+     "keyword": "running shoes for heavy runners",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 880,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 870
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 870
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 860
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 850
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 850
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 840
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 830
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 830
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 820
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 810
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 810
+      }
+     ]
+    },
+    {
+     "keyword": "waterproof trail running shoes",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 1300,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 1300
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 1300
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 1300
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 1290
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 1290
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 1290
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 1290
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 1290
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 1280
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 1280
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 1280
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 1280
+      }
+     ]
+    },
+    {
+     "keyword": "vegan running shoes",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 320,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 320
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 310
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 310
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 300
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 290
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 290
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 280
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 270
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 270
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 260
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 260
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 250
+      }
+     ]
+    },
+    {
+     "keyword": "budget running shoes for beginners",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "stability running shoes for flat feet",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 1600,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 1600
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 1590
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 1580
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 1580
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 1570
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 1560
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 1550
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 1550
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 1540
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 1530
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 1520
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 1520
+      }
+     ]
+    },
+    {
+     "keyword": "womens wide running shoes",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 720,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 720
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 710
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 710
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 700
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 700
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 690
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 690
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 680
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 680
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 670
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 670
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 660
+      }
+     ]
+    },
+    {
+     "keyword": "affordable carbon plate running shoes",
+     "location_code": 2344,
+     "language_code": "en",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 480,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.87,
+     "cpc": 1.12,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 480
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 480
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 470
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 470
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 460
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 460
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 460
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 450
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 450
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 450
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 440
+      },
+      {
+       "year": 2025,
+       "month": 10,
+       "search_volume": 440
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
