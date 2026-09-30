@@ -442,7 +442,7 @@ class WorkflowRuntime:
     def _finish(self, run: CollectionRun, steps: dict[str, StepState]) -> None:
         run.steps = list(steps.values())
         run.finished_at = utcnow()
-        run.actual_cost_usd = round(self.costs.total_for_run(run.run_id), 6)
+        run.actual_cost_usd = self.costs.total_for_run(run.run_id)
         self.save(run)
         self.audit.record(
             actor="workflow_runtime",

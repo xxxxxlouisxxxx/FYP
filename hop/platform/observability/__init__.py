@@ -209,11 +209,12 @@ class CostRecorder:
             )
 
     def total_for_run(self, run_id: str) -> float:
+        """Rounded to micro-dollars so totals agree across backends that sum floats in different orders."""
         with self.store.session() as s:
-            return float(
-                s.execute(select(func.coalesce(func.sum(CostRow.usd), 0.0)).where(CostRow.run_id == run_id)).scalar()
-                or 0.0
-            )
+            total = s.execute(
+                select(func.coalesce(func.sum(CostRow.usd), 0.0)).where(CostRow.run_id == run_id)
+            ).scalar()
+            return round(float(total or 0.0), 6)
 
     def breakdown(self, run_id: str | None = None) -> list[dict[str, Any]]:
         with self.store.session() as s:

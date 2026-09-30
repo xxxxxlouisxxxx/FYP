@@ -40,7 +40,7 @@ class Base(DeclarativeBase):
 class RunRow(Base):
     __tablename__ = "runs"
     run_id: Mapped[str] = mapped_column(String(64), primary_key=True)
-    idempotency_key: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    idempotency_key: Mapped[str] = mapped_column(String(256), unique=True, index=True)
     workflow: Mapped[str] = mapped_column(String(128))
     status: Mapped[str] = mapped_column(String(32), index=True)
     market: Mapped[str | None] = mapped_column(String(8), index=True)
