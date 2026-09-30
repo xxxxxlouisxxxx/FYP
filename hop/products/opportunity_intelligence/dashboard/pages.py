@@ -355,6 +355,7 @@ def evidence_room() -> None:
     with tabs[1]:
         comp = pd.DataFrame([{"component": x.component_id, "weight": x.weight,
                               "value": x.value if x.value is not None else float("nan"), "contribution": x.contribution,
+                              "Δ score if weight +0.05": card.score.sensitivity.get(x.component_id),
                               "source": x.source, "rationale": x.rationale} for x in card.score.components])  # fmt: skip
         st.dataframe(comp, hide_index=True, width="stretch")
         pens = list(card.score.penalties)
