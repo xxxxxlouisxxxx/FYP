@@ -1,0 +1,377 @@
+{
+  "$defs": {
+    "AccessClassification": {
+      "enum": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL",
+        "RESTRICTED"
+      ],
+      "title": "AccessClassification",
+      "type": "string"
+    },
+    "CostAttribution": {
+      "additionalProperties": false,
+      "properties": {
+        "simulated": {
+          "default": false,
+          "title": "Simulated",
+          "type": "boolean"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "usd": {
+          "minimum": 0,
+          "title": "Usd",
+          "type": "number"
+        }
+      },
+      "required": [
+        "usd",
+        "unit"
+      ],
+      "title": "CostAttribution",
+      "type": "object"
+    },
+    "DataQualityStatus": {
+      "enum": [
+        "PASSED",
+        "WARNING",
+        "FAILED_NON_CRITICAL",
+        "FAILED_CRITICAL",
+        "QUARANTINED"
+      ],
+      "title": "DataQualityStatus",
+      "type": "string"
+    },
+    "Device": {
+      "enum": [
+        "mobile",
+        "desktop"
+      ],
+      "title": "Device",
+      "type": "string"
+    },
+    "EvidenceType": {
+      "enum": [
+        "DEMAND_SIGNAL",
+        "SERP_RESULT",
+        "SERP_FEATURE",
+        "GERP_ANSWER",
+        "GERP_PRIMARY_RECOMMENDATION",
+        "GERP_SUPPORTING_RECOMMENDATION",
+        "GERP_MENTION",
+        "GERP_EXCLUSION",
+        "GERP_CITATION",
+        "COUNTER_EVIDENCE"
+      ],
+      "title": "EvidenceType",
+      "type": "string"
+    },
+    "RetentionClass": {
+      "enum": [
+        "RAW_PROVIDER_90D",
+        "MODEL_OUTPUT_1Y",
+        "DERIVED_2Y",
+        "AUDIT_7Y"
+      ],
+      "title": "RetentionClass",
+      "type": "string"
+    },
+    "SourceSpan": {
+      "additionalProperties": false,
+      "properties": {
+        "end": {
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "field": {
+          "description": "JSON path of the text inside the parsed payload",
+          "title": "Field",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "start",
+        "end",
+        "text"
+      ],
+      "title": "SourceSpan",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "access_classification": {
+      "$ref": "#/$defs/AccessClassification",
+      "default": "INTERNAL"
+    },
+    "attributes": {
+      "additionalProperties": true,
+      "title": "Attributes",
+      "type": "object"
+    },
+    "content_hash": {
+      "description": "SHA-256 of the raw payload bytes",
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Content Hash",
+      "type": "string"
+    },
+    "correction_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Correction Reason"
+    },
+    "cost_attribution": {
+      "$ref": "#/$defs/CostAttribution"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "data_quality_status": {
+      "$ref": "#/$defs/DataQualityStatus",
+      "default": "PASSED"
+    },
+    "device": {
+      "$ref": "#/$defs/Device"
+    },
+    "entity_refs": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Entity Refs",
+      "type": "array"
+    },
+    "evidence_id": {
+      "title": "Evidence Id",
+      "type": "string"
+    },
+    "evidence_type": {
+      "$ref": "#/$defs/EvidenceType"
+    },
+    "extracted_claim": {
+      "title": "Extracted Claim",
+      "type": "string"
+    },
+    "language": {
+      "title": "Language",
+      "type": "string"
+    },
+    "locale": {
+      "title": "Locale",
+      "type": "string"
+    },
+    "market": {
+      "title": "Market",
+      "type": "string"
+    },
+    "model_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model Id"
+    },
+    "need_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Need Id"
+    },
+    "observation_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Observation Id"
+    },
+    "observed_at": {
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+    },
+    "parser_version": {
+      "title": "Parser Version",
+      "type": "string"
+    },
+    "payload_schema_version": {
+      "title": "Payload Schema Version",
+      "type": "string"
+    },
+    "prompt_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Id"
+    },
+    "prompt_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Version"
+    },
+    "quality_flags": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Quality Flags",
+      "type": "array"
+    },
+    "query_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Query Id"
+    },
+    "raw_payload_uri": {
+      "title": "Raw Payload Uri",
+      "type": "string"
+    },
+    "retention_class": {
+      "$ref": "#/$defs/RetentionClass",
+      "default": "RAW_PROVIDER_90D"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "evidence_item_v1",
+      "default": "evidence_item_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_endpoint": {
+      "title": "Source Endpoint",
+      "type": "string"
+    },
+    "source_provider": {
+      "title": "Source Provider",
+      "type": "string"
+    },
+    "source_span": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SourceSpan"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "supersedes_version": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Supersedes Version"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    },
+    "untrusted_content": {
+      "default": true,
+      "title": "Untrusted Content",
+      "type": "boolean"
+    },
+    "version": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "evidence_id",
+    "evidence_type",
+    "source_provider",
+    "source_endpoint",
+    "market",
+    "locale",
+    "language",
+    "device",
+    "observed_at",
+    "raw_payload_uri",
+    "content_hash",
+    "parser_version",
+    "payload_schema_version",
+    "extracted_claim",
+    "cost_attribution",
+    "run_id"
+  ],
+  "title": "EvidenceItem",
+  "type": "object"
+}

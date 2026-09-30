@@ -1,0 +1,130 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "checks": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Checks",
+      "type": "array"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "evaluation_run_id": {
+      "title": "Evaluation Run Id",
+      "type": "string"
+    },
+    "failures": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Failures",
+      "type": "array"
+    },
+    "finished_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Finished At"
+    },
+    "metrics": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Metrics",
+      "type": "object"
+    },
+    "n_cases": {
+      "title": "N Cases",
+      "type": "integer"
+    },
+    "partition": {
+      "title": "Partition",
+      "type": "string"
+    },
+    "passed": {
+      "title": "Passed",
+      "type": "boolean"
+    },
+    "schema_version": {
+      "const": "evaluation_run_v1",
+      "default": "evaluation_run_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "started_at": {
+      "format": "date-time",
+      "title": "Started At",
+      "type": "string"
+    },
+    "subject": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Subject",
+      "type": "object"
+    },
+    "suite_id": {
+      "title": "Suite Id",
+      "type": "string"
+    },
+    "suite_version": {
+      "title": "Suite Version",
+      "type": "string"
+    },
+    "thresholds": {
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "type": "object"
+      },
+      "title": "Thresholds",
+      "type": "object"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    }
+  },
+  "required": [
+    "suite_id",
+    "suite_version",
+    "dataset_version",
+    "partition",
+    "subject",
+    "metrics",
+    "thresholds",
+    "checks",
+    "passed",
+    "n_cases"
+  ],
+  "title": "EvaluationRun",
+  "type": "object"
+}

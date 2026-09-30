@@ -1,0 +1,214 @@
+{
+  "$defs": {
+    "CapabilityKind": {
+      "enum": [
+        "collector",
+        "agent",
+        "service",
+        "rule",
+        "evaluator",
+        "exporter"
+      ],
+      "title": "CapabilityKind",
+      "type": "string"
+    },
+    "CapabilityStatus": {
+      "enum": [
+        "draft",
+        "tested",
+        "approved",
+        "deprecated",
+        "retired"
+      ],
+      "title": "CapabilityStatus",
+      "type": "string"
+    },
+    "ModelPolicy": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_models": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Allowed Models",
+          "type": "array"
+        },
+        "max_input_chars": {
+          "default": 24000,
+          "title": "Max Input Chars",
+          "type": "integer"
+        },
+        "max_output_tokens": {
+          "default": 1200,
+          "title": "Max Output Tokens",
+          "type": "integer"
+        }
+      },
+      "title": "ModelPolicy",
+      "type": "object"
+    },
+    "NetworkPolicy": {
+      "additionalProperties": false,
+      "properties": {
+        "outbound_allowlist": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Outbound Allowlist",
+          "type": "array"
+        }
+      },
+      "title": "NetworkPolicy",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "abstain_when": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Abstain When",
+      "type": "array"
+    },
+    "allowed_tools": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Allowed Tools",
+      "type": "array"
+    },
+    "capability_id": {
+      "pattern": "^[a-z0-9_]+(\\.[a-z0-9_]+)+$",
+      "title": "Capability Id",
+      "type": "string"
+    },
+    "cost_model": {
+      "additionalProperties": true,
+      "title": "Cost Model",
+      "type": "object"
+    },
+    "documentation": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Documentation",
+      "type": "object"
+    },
+    "evaluation_suite": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Evaluation Suite"
+    },
+    "evidence_classes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Classes",
+      "type": "array"
+    },
+    "human_review": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Human Review"
+    },
+    "input_schema": {
+      "title": "Input Schema",
+      "type": "string"
+    },
+    "kind": {
+      "$ref": "#/$defs/CapabilityKind"
+    },
+    "max_cost_usd": {
+      "default": 1.0,
+      "minimum": 0,
+      "title": "Max Cost Usd",
+      "type": "number"
+    },
+    "max_duration_seconds": {
+      "default": 300,
+      "exclusiveMinimum": 0,
+      "title": "Max Duration Seconds",
+      "type": "number"
+    },
+    "max_steps": {
+      "default": 20,
+      "maximum": 1000,
+      "minimum": 1,
+      "title": "Max Steps",
+      "type": "integer"
+    },
+    "model_policy": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ModelPolicy"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "network_policy": {
+      "$ref": "#/$defs/NetworkPolicy"
+    },
+    "output_schema": {
+      "title": "Output Schema",
+      "type": "string"
+    },
+    "owner": {
+      "title": "Owner",
+      "type": "string"
+    },
+    "permissions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Permissions",
+      "type": "array"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "string"
+    },
+    "slo": {
+      "additionalProperties": true,
+      "title": "Slo",
+      "type": "object"
+    },
+    "status": {
+      "$ref": "#/$defs/CapabilityStatus"
+    },
+    "version": {
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "capability_id",
+    "version",
+    "kind",
+    "owner",
+    "status",
+    "purpose",
+    "input_schema",
+    "output_schema"
+  ],
+  "title": "CapabilityManifest",
+  "type": "object"
+}

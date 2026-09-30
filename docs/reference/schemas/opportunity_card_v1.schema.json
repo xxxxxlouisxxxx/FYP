@@ -1,0 +1,801 @@
+{
+  "$defs": {
+    "CounterEvidenceStatus": {
+      "enum": [
+        "NOT_RUN",
+        "COMPLETED",
+        "UNAVAILABLE"
+      ],
+      "title": "CounterEvidenceStatus",
+      "type": "string"
+    },
+    "Explanation": {
+      "additionalProperties": false,
+      "properties": {
+        "cited_evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Cited Evidence Ids",
+          "type": "array"
+        },
+        "generator": {
+          "enum": [
+            "template",
+            "model_gateway"
+          ],
+          "title": "Generator",
+          "type": "string"
+        },
+        "model_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Id"
+        },
+        "prompt_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Id"
+        },
+        "prompt_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Version"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "validated": {
+          "title": "Validated",
+          "type": "boolean"
+        },
+        "validation_notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Validation Notes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "summary",
+        "generator",
+        "validated"
+      ],
+      "title": "Explanation",
+      "type": "object"
+    },
+    "MeasuredValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "measured",
+          "default": "measured",
+          "title": "Kind",
+          "type": "string"
+        },
+        "n": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Number of underlying observations",
+          "title": "N"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "state": {
+          "$ref": "#/$defs/ValueState"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "MeasuredValue",
+      "type": "object"
+    },
+    "OpportunityStatus": {
+      "enum": [
+        "DRAFT",
+        "IN_REVIEW",
+        "APPROVED",
+        "WATCHLIST",
+        "REJECTED"
+      ],
+      "title": "OpportunityStatus",
+      "type": "string"
+    },
+    "Proportion": {
+      "additionalProperties": false,
+      "description": "A rate that always travels with its sample size and Wilson interval.",
+      "properties": {
+        "ci_high": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ci High"
+        },
+        "ci_low": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ci Low"
+        },
+        "confidence": {
+          "default": 0.95,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "exploratory": {
+          "default": false,
+          "title": "Exploratory",
+          "type": "boolean"
+        },
+        "kind": {
+          "const": "proportion",
+          "default": "proportion",
+          "title": "Kind",
+          "type": "string"
+        },
+        "method": {
+          "const": "wilson",
+          "default": "wilson",
+          "title": "Method",
+          "type": "string"
+        },
+        "n": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "N"
+        },
+        "rate": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rate"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "state": {
+          "$ref": "#/$defs/ValueState"
+        },
+        "successes": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Successes"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "Proportion",
+      "type": "object"
+    },
+    "RiskPenalty": {
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "title": "Amount",
+          "type": "number"
+        },
+        "applied": {
+          "title": "Applied",
+          "type": "boolean"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "observed": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Observed"
+        },
+        "penalty_id": {
+          "title": "Penalty Id",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "penalty_id",
+        "label",
+        "amount",
+        "applied",
+        "observed",
+        "reason"
+      ],
+      "title": "RiskPenalty",
+      "type": "object"
+    },
+    "ScoreBreakdown": {
+      "additionalProperties": false,
+      "properties": {
+        "components": {
+          "items": {
+            "$ref": "#/$defs/ScoreComponent"
+          },
+          "title": "Components",
+          "type": "array"
+        },
+        "formula": {
+          "title": "Formula",
+          "type": "string"
+        },
+        "gross": {
+          "title": "Gross",
+          "type": "number"
+        },
+        "penalties": {
+          "items": {
+            "$ref": "#/$defs/RiskPenalty"
+          },
+          "title": "Penalties",
+          "type": "array"
+        },
+        "priority": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ],
+          "title": "Priority",
+          "type": "string"
+        },
+        "score_version": {
+          "title": "Score Version",
+          "type": "string"
+        },
+        "sensitivity": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "score change if each weight +0.05",
+          "title": "Sensitivity",
+          "type": "object"
+        },
+        "total": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Total",
+          "type": "number"
+        },
+        "total_penalty": {
+          "title": "Total Penalty",
+          "type": "number"
+        }
+      },
+      "required": [
+        "score_version",
+        "formula",
+        "components",
+        "penalties",
+        "gross",
+        "total_penalty",
+        "total",
+        "priority"
+      ],
+      "title": "ScoreBreakdown",
+      "type": "object"
+    },
+    "ScoreComponent": {
+      "additionalProperties": false,
+      "properties": {
+        "component_id": {
+          "title": "Component Id",
+          "type": "string"
+        },
+        "contribution": {
+          "title": "Contribution",
+          "type": "number"
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "weight": {
+          "title": "Weight",
+          "type": "number"
+        }
+      },
+      "required": [
+        "component_id",
+        "weight",
+        "value",
+        "contribution",
+        "source",
+        "rationale"
+      ],
+      "title": "ScoreComponent",
+      "type": "object"
+    },
+    "Statement": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "kind": {
+          "$ref": "#/$defs/StatementKind"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "text"
+      ],
+      "title": "Statement",
+      "type": "object"
+    },
+    "StatementKind": {
+      "enum": [
+        "OBSERVED",
+        "INFERRED",
+        "UNKNOWN",
+        "LIMITATION"
+      ],
+      "title": "StatementKind",
+      "type": "string"
+    },
+    "ValueState": {
+      "enum": [
+        "OBSERVED_ZERO",
+        "OBSERVED_VALUE",
+        "NOT_COLLECTED",
+        "PROVIDER_ERROR",
+        "PARSING_FAILED",
+        "NOT_APPLICABLE",
+        "SUPPRESSED_BY_POLICY",
+        "INSUFFICIENT_SAMPLE"
+      ],
+      "title": "ValueState",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "approver": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Approver"
+    },
+    "attribute_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Attribute Ids",
+      "type": "array"
+    },
+    "brand_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Brand Id"
+    },
+    "candidate_id": {
+      "title": "Candidate Id",
+      "type": "string"
+    },
+    "card_id": {
+      "title": "Card Id",
+      "type": "string"
+    },
+    "confidence_label": {
+      "enum": [
+        "high",
+        "moderate",
+        "low",
+        "exploratory"
+      ],
+      "title": "Confidence Label",
+      "type": "string"
+    },
+    "counter_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Counter Evidence Ids",
+      "type": "array"
+    },
+    "counter_evidence_status": {
+      "$ref": "#/$defs/CounterEvidenceStatus"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "domain_pack": {
+      "title": "Domain Pack",
+      "type": "string"
+    },
+    "domain_pack_version": {
+      "title": "Domain Pack Version",
+      "type": "string"
+    },
+    "evidence_confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Evidence Confidence",
+      "type": "number"
+    },
+    "explanation": {
+      "$ref": "#/$defs/Explanation"
+    },
+    "gap_family": {
+      "title": "Gap Family",
+      "type": "string"
+    },
+    "inferred": {
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Inferred",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "lineage_verified": {
+      "title": "Lineage Verified",
+      "type": "boolean"
+    },
+    "market": {
+      "title": "Market",
+      "type": "string"
+    },
+    "model_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Model Ids",
+      "type": "array"
+    },
+    "need_id": {
+      "title": "Need Id",
+      "type": "string"
+    },
+    "need_label": {
+      "title": "Need Label",
+      "type": "string"
+    },
+    "next_validation_action": {
+      "title": "Next Validation Action",
+      "type": "string"
+    },
+    "observed": {
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Observed",
+      "type": "array"
+    },
+    "owner": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Owner"
+    },
+    "priority": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ],
+      "title": "Priority",
+      "type": "string"
+    },
+    "prompt_versions": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Prompt Versions",
+      "type": "object"
+    },
+    "proposed_action": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Proposed Action"
+    },
+    "required_approver_role": {
+      "default": "analyst",
+      "title": "Required Approver Role",
+      "type": "string"
+    },
+    "requires_human_approval": {
+      "default": true,
+      "title": "Requires Human Approval",
+      "type": "boolean"
+    },
+    "rule_id": {
+      "title": "Rule Id",
+      "type": "string"
+    },
+    "rule_set_id": {
+      "title": "Rule Set Id",
+      "type": "string"
+    },
+    "rule_version": {
+      "title": "Rule Version",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "sample_summary": {
+      "additionalProperties": {
+        "discriminator": {
+          "mapping": {
+            "measured": "#/$defs/MeasuredValue",
+            "proportion": "#/$defs/Proportion"
+          },
+          "propertyName": "kind"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/MeasuredValue"
+          },
+          {
+            "$ref": "#/$defs/Proportion"
+          }
+        ]
+      },
+      "title": "Sample Summary",
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "opportunity_card_v1",
+      "default": "opportunity_card_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "score": {
+      "$ref": "#/$defs/ScoreBreakdown"
+    },
+    "score_version": {
+      "title": "Score Version",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/OpportunityStatus",
+      "default": "DRAFT"
+    },
+    "supporting_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Supporting Evidence Ids",
+      "type": "array"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    },
+    "unknowns": {
+      "items": {
+        "$ref": "#/$defs/Statement"
+      },
+      "title": "Unknowns",
+      "type": "array"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "title": "Updated At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "card_id",
+    "candidate_id",
+    "run_id",
+    "title",
+    "market",
+    "need_id",
+    "need_label",
+    "gap_family",
+    "priority",
+    "score",
+    "confidence_label",
+    "evidence_confidence",
+    "supporting_evidence_ids",
+    "counter_evidence_status",
+    "explanation",
+    "next_validation_action",
+    "rule_set_id",
+    "rule_id",
+    "rule_version",
+    "score_version",
+    "domain_pack",
+    "domain_pack_version",
+    "lineage_verified"
+  ],
+  "title": "OpportunityCard",
+  "type": "object"
+}

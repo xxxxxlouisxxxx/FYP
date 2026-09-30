@@ -50,4 +50,5 @@ ignore = ["B008", "C408", "E501"]  # line length is owned by `ruff format`
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q"
+addopts = "-ra"
+filterwarnings = ["ignore::DeprecationWarning:fastapi.testclient", "ignore:Using `httpx` with `starlette.testclient`"]

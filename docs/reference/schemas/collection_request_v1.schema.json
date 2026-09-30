@@ -1,0 +1,157 @@
+{
+  "$defs": {
+    "Device": {
+      "enum": [
+        "mobile",
+        "desktop"
+      ],
+      "title": "Device",
+      "type": "string"
+    },
+    "SignalFamily": {
+      "enum": [
+        "demand",
+        "serp",
+        "gerp"
+      ],
+      "title": "SignalFamily",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "What an analyst asks the platform to collect. Validated before any spend.",
+  "properties": {
+    "budget_approved_by": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Budget Approved By"
+    },
+    "budget_usd": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Budget Usd"
+    },
+    "collection_window": {
+      "description": "Idempotency window; the same request in the same window maps to the same run",
+      "title": "Collection Window",
+      "type": "string"
+    },
+    "decision_question": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Decision Question"
+    },
+    "device": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Device"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "domain_pack": {
+      "title": "Domain Pack",
+      "type": "string"
+    },
+    "gerp_repeats": {
+      "anyOf": [
+        {
+          "maximum": 10,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Gerp Repeats"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Language"
+    },
+    "market": {
+      "pattern": "^[A-Z]{2}$",
+      "title": "Market",
+      "type": "string"
+    },
+    "model_provider": {
+      "default": "auto",
+      "title": "Model Provider",
+      "type": "string"
+    },
+    "request_id": {
+      "title": "Request Id",
+      "type": "string"
+    },
+    "requested_by": {
+      "default": "cli",
+      "title": "Requested By",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "collection_request_v1",
+      "default": "collection_request_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "serp_provider": {
+      "default": "auto",
+      "title": "Serp Provider",
+      "type": "string"
+    },
+    "signal_families": {
+      "items": {
+        "$ref": "#/$defs/SignalFamily"
+      },
+      "title": "Signal Families",
+      "type": "array"
+    },
+    "tier": {
+      "pattern": "^[A-Z]$",
+      "title": "Tier",
+      "type": "string"
+    }
+  },
+  "required": [
+    "domain_pack",
+    "market",
+    "tier"
+  ],
+  "title": "CollectionRequest",
+  "type": "object"
+}
