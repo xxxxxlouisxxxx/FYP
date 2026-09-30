@@ -9,7 +9,7 @@ from streamlit.testing.v1 import AppTest
 
 from hop.products.opportunity_intelligence.contracts import OpportunityStatus
 from hop.products.opportunity_intelligence.dashboard.pages import PAGES
-from tests.conftest import REPO_ROOT, Discovery
+from tests.conftest import REPO_ROOT, Discovery, point_env_at
 
 APP_FILE = REPO_ROOT / "hop" / "products" / "opportunity_intelligence" / "dashboard" / "app.py"
 
@@ -27,9 +27,7 @@ def page_script(page_name: str, role: str, user: str) -> None:
 
 
 def _point_dashboard_at(data_dir: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("HOP_DATA_DIR", str(data_dir))
-    monkeypatch.setenv("HOP_SERP_PROVIDER", "sandbox")
-    monkeypatch.setenv("HOP_MODEL_PROVIDER", "mock")
+    point_env_at(data_dir, monkeypatch)
     st.cache_resource.clear()
 
 

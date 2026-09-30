@@ -6,8 +6,9 @@ MARKET ?= HK
 TIER ?= A
 API_PORT ?= 8000
 DASHBOARD_PORT ?= 8501
+PG_TEST_URL ?= postgresql+psycopg://hop:hop@localhost:5432/postgres
 
-.PHONY: help install lock lint format test check validate sandbox-run evaluate schemas cli-docs api dashboard \
+.PHONY: help install lock lint format test test-postgres check validate sandbox-run evaluate schemas cli-docs api dashboard \
 	compose-up compose-down clean-data
 
 help: ## Show this help
@@ -16,9 +17,9 @@ help: ## Show this help
 $(BIN)/python:
 	$(PYTHON) -m venv $(VENV)
 
-install: $(BIN)/python ## Create .venv and install the platform with dashboard + dev extras
+install: $(BIN)/python ## Create .venv and install the platform with dashboard, dev and postgres extras
 	$(BIN)/pip install --upgrade pip
-	$(BIN)/pip install -e ".[dashboard,dev]"
+	$(BIN)/pip install -e ".[dashboard,dev,postgres]"
 
 lock: ## Refresh requirements.lock from the current environment
 	$(BIN)/pip freeze --exclude-editable | grep -v '^-e ' > requirements.lock
@@ -33,6 +34,9 @@ format: ## Apply ruff fixes and formatting
 
 test: ## Run the full pytest suite (offline, sandbox providers, mock model)
 	$(BIN)/pytest
+
+test-postgres: ## Run the full suite against Postgres (PG_TEST_URL role needs CREATEDB; one throwaway DB per test)
+	HOP_TEST_DATABASE_URL=$(PG_TEST_URL) $(BIN)/pytest
 
 check: lint test ## Lint and test
 

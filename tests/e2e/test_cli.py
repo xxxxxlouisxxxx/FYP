@@ -8,15 +8,12 @@ import pytest
 from typer.testing import CliRunner
 
 from hop.cli import main as cli
-from tests.conftest import REPO_ROOT
+from tests.conftest import point_env_at
 
 
 @pytest.fixture
 def runner(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[CliRunner]:
-    monkeypatch.setenv("HOP_DATA_DIR", str(tmp_path))
-    monkeypatch.setenv("HOP_SERP_PROVIDER", "sandbox")
-    monkeypatch.setenv("HOP_MODEL_PROVIDER", "mock")
-    monkeypatch.setenv("HOP_DOMAIN_PACKS_DIR", str(REPO_ROOT / "domain_packs"))
+    point_env_at(tmp_path, monkeypatch)
     cli.get_app.cache_clear()
     yield CliRunner()
     cli.get_app.cache_clear()

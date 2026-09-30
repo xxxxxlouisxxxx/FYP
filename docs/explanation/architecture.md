@@ -89,5 +89,5 @@ hash-chained audit event.
 | Providers | Sandbox fixtures; DataForSEO adapter tested against a mocked transport | Live DataForSEO calibration, a second SERP provider, multi-provider routing |
 | Models | Deterministic mock; OpenAI-compatible adapter with egress and budget controls | Model registry, champion-challenger and shadow runs, held-out golden sets labelled by analysts |
 | Telemetry | Spans and costs stored in the database and shown in the CLI and dashboard | OTLP export to a collector with alerting (spec 11.3) |
-| Storage | SQLite, with Postgres via `DATABASE_URL` (the DDL compiles for Postgres; not yet run against a live server); local object store | Managed Postgres, S3-compatible object-lock storage, retention jobs |
+| Storage | SQLite, or Postgres 16 via `DATABASE_URL` (full suite and sandbox run verified with `make test-postgres`; no migration tool yet); local object store | Managed Postgres, S3-compatible object-lock storage, retention jobs |
 | Security | Egress allowlist, RBAC, redaction, injection scanning | Secrets manager, supply-chain scanning, a DLP review of exports |

@@ -12,7 +12,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 COPY requirements.lock ./
-RUN pip install -r requirements.lock "psycopg[binary]>=3.2,<4"
+RUN pip install -r requirements.lock
 
 COPY pyproject.toml README.md ./
 COPY hop ./hop

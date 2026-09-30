@@ -26,6 +26,14 @@ make api                                        # FastAPI, http://localhost:8000
 make check                                      # ruff and pytest
 ```
 
+### Running against Postgres
+
+SQLite is the default. To use Postgres, set `DATABASE_URL=postgresql+psycopg://user:pw@host:5432/db`
+(the `postgres` extra is part of `make install`). To run the whole test suite on Postgres, use
+`make test-postgres PG_TEST_URL=postgresql+psycopg://hop:hop@localhost:5432/postgres`. The role needs
+`CREATEDB`: every test gets its own throwaway database, dropped when the test ends. Tests marked
+`postgres` run only in this mode.
+
 To try it without a local install, run `make compose-up`. This starts the API, the dashboard,
 Postgres and Redis from `infrastructure/docker-compose.yml`.
 
@@ -132,6 +140,8 @@ make dashboard                                  # Streamlit 儀表板（7 頁）
 make api                                        # FastAPI：http://localhost:8000/docs
 make check                                      # ruff 同 pytest
 ```
+
+預設用 SQLite。想用 Postgres，就設定 `DATABASE_URL=postgresql+psycopg://user:pw@host:5432/db`。想喺 Postgres 上面跑晒成套測試，可以用 `make test-postgres PG_TEST_URL=...`（個角色要有 `CREATEDB` 權限，每個測試會用一個臨時資料庫，測試完就刪除）。
 
 ### 重點
 
