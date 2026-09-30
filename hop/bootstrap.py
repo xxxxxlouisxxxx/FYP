@@ -23,6 +23,7 @@ from hop.products.opportunity_intelligence.repository import OpportunityReposito
 from hop.products.opportunity_intelligence.tools import build_tool_registry
 
 PRODUCT_CAPABILITIES = Path(__file__).parent / "products" / "opportunity_intelligence" / "capabilities"
+DEFAULT_DOMAIN_PACK = "sports-footwear"
 
 
 class ConfigurationError(RuntimeError):
@@ -100,8 +101,9 @@ class App:
 
     def _dfs_credentials(self) -> dict[str, str]:
         s = self.settings
-        assert s.dataforseo_login and s.dataforseo_password
-        return {"login": s.dataforseo_login, "password": s.dataforseo_password.get_secret_value()}
+        if not (s.dataforseo_login and s.dataforseo_password):
+            raise ConfigurationError("DataForSEO credentials are not configured")
+        return {"login": s.dataforseo_login.get_secret_value(), "password": s.dataforseo_password.get_secret_value()}
 
 
 def _require(path: Path | None) -> Path:
@@ -112,7 +114,7 @@ def _require(path: Path | None) -> Path:
 
 def build_app(settings: Settings | None = None, *, pack_id: str | None = None, sleep=None) -> App:  # noqa: ANN001
     settings = settings or Settings.from_env()
-    pack = load_domain_pack(settings.domain_packs_dir, pack_id or settings.default_domain_pack)
+    pack = load_domain_pack(settings.domain_packs_dir, pack_id or settings.default_domain_pack or DEFAULT_DOMAIN_PACK)
     config = load_opportunity_config(pack)
     lookup = gerp_fixture_lookup(pack.sandbox_dir) if pack.sandbox_dir else None
     platform = build_platform(

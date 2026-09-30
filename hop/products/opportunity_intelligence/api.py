@@ -34,7 +34,7 @@ class ReviewRequest(BaseModel):
 
 def build_router(app_ctx: Any) -> APIRouter:
     """``app_ctx`` is the composed ``hop.bootstrap.App`` (passed in to keep this module import-light)."""
-    from hop.products.opportunity_intelligence.opportunity_lifecycle.export import render
+    from hop.products.opportunity_intelligence.opportunity_lifecycle.export import export_cards
     from hop.products.opportunity_intelligence.pipeline import _estimate, start_discovery
 
     router = APIRouter(tags=["opportunity-intelligence"])
@@ -83,11 +83,14 @@ def build_router(app_ctx: Any) -> APIRouter:
     def export(
         fmt: Literal["json", "csv"] = "json",
         status: str | None = None,
-        _: Principal = Depends(require("opportunity:read")),
+        p: Principal = Depends(require("opportunity:read")),
     ) -> Response:
-        app_ctx.platform.policy.enforce_tool("opportunity.exporter", "object_store.export_write")
-        data = render(app_ctx.repo.cards(status=status), fmt)
-        return Response(content=data, media_type="text/csv" if fmt == "csv" else "application/json")
+        uri, data = export_cards(app_ctx.platform, app_ctx.repo.cards(status=status), fmt=fmt, actor=p.user)
+        return Response(
+            content=data,
+            media_type="text/csv" if fmt == "csv" else "application/json",
+            headers={"X-HOP-Export-URI": uri},
+        )
 
     @router.get("/opportunities/{card_id}")
     def get_opportunity(card_id: str, _: Principal = Depends(require("opportunity:read"))) -> dict[str, Any]:

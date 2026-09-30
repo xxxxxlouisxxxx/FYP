@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 from typing import Literal
 
-from hop.platform.common_contracts import ActorType, canonical_json
+from hop.platform.common_contracts import ActorType
 from hop.platform.services import PlatformServices
 from hop.products.opportunity_intelligence.contracts import OpportunityCard
 
@@ -52,7 +52,7 @@ def export_cards(
     data = render(cards, fmt)
     with platform.telemetry.span("Opportunity export", {"export.format": fmt, "export.cards": len(cards)}):
         artifact = platform.evidence.persist_raw(
-            data if fmt == "csv" else canonical_json(json.loads(data)).encode(),
+            data,
             run_id=None,
             namespace=f"exports/{fmt}",
             content_type="text/csv" if fmt == "csv" else "application/json",

@@ -24,7 +24,7 @@ class Settings(BaseModel):
     database_url: str
     object_store_dir: Path
     domain_packs_dir: Path
-    default_domain_pack: str = "sports-footwear"
+    default_domain_pack: str | None = None
 
     serp_provider: str = "auto"
     model_provider: str = "auto"
@@ -58,7 +58,7 @@ class Settings(BaseModel):
             "database_url": os.environ.get("DATABASE_URL", f"sqlite:///{data_dir / 'hop.db'}"),
             "object_store_dir": Path(os.environ.get("HOP_OBJECT_STORE_DIR", data_dir / "objects")),
             "domain_packs_dir": Path(os.environ.get("HOP_DOMAIN_PACKS_DIR", REPO_ROOT / "domain_packs")),
-            "default_domain_pack": os.environ.get("HOP_DOMAIN_PACK", "sports-footwear"),
+            "default_domain_pack": os.environ.get("HOP_DOMAIN_PACK") or None,
             "serp_provider": os.environ.get("HOP_SERP_PROVIDER", "auto"),
             "model_provider": os.environ.get("HOP_MODEL_PROVIDER", "auto"),
             "dataforseo_login": os.environ.get("DATAFORSEO_LOGIN") or None,

@@ -221,10 +221,11 @@ class CostRecorder:
                 CostRow.category,
                 CostRow.provider,
                 CostRow.capability_id,
+                CostRow.unit,
                 func.sum(CostRow.units),
                 func.sum(CostRow.usd),
                 func.max(CostRow.simulated),
-            ).group_by(CostRow.category, CostRow.provider, CostRow.capability_id)
+            ).group_by(CostRow.category, CostRow.provider, CostRow.capability_id, CostRow.unit)
             if run_id:
                 q = q.where(CostRow.run_id == run_id)
             return [
@@ -232,9 +233,10 @@ class CostRecorder:
                     "category": c,
                     "provider": p,
                     "capability_id": cap,
+                    "unit": unit,
                     "units": float(u or 0),
                     "usd": round(float(usd or 0), 6),
                     "simulated": bool(sim),
                 }
-                for c, p, cap, u, usd, sim in s.execute(q)
+                for c, p, cap, unit, u, usd, sim in s.execute(q)
             ]
