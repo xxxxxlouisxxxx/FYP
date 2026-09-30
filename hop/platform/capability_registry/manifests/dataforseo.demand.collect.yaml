@@ -1,0 +1,19 @@
+capability_id: dataforseo.demand.collect
+version: 1.0.0
+kind: collector
+owner: data-platform-team
+status: approved
+purpose: Retrieve Google Ads search volume and monthly trend for consumer queries from DataForSEO.
+input_schema: demand_collection_request_v1
+output_schema: demand_observation_v1
+permissions: [provider.dataforseo.task_post, object_store.raw_write]
+allowed_tools: [provider.http_post]
+evidence_classes: [DEMAND_SIGNAL]
+network_policy:
+  outbound_allowlist: [api.dataforseo.com]
+max_steps: 20
+max_duration_seconds: 600
+max_cost_usd: 2.0
+slo: {availability: 0.99, p95_completion_minutes: 10}
+cost_model: {unit: provider_task, unit_cost_usd: 0.075}
+documentation: {runbook: docs/runbooks/dataforseo-serp.md}

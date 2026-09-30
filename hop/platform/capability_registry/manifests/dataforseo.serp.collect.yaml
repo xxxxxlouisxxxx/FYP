@@ -1,0 +1,19 @@
+capability_id: dataforseo.serp.collect
+version: 1.0.0
+kind: collector
+owner: data-platform-team
+status: approved
+purpose: Retrieve and persist Google organic SERP observations from DataForSEO (live/advanced).
+input_schema: serp_collection_request_v1
+output_schema: serp_observation_v2
+permissions: [provider.dataforseo.task_post, object_store.raw_write]
+allowed_tools: [provider.http_post]
+evidence_classes: [SERP_RESULT, SERP_FEATURE]
+network_policy:
+  outbound_allowlist: [api.dataforseo.com]
+max_steps: 200
+max_duration_seconds: 900
+max_cost_usd: 2.0
+slo: {availability: 0.99, p95_completion_minutes: 15}
+cost_model: {unit: provider_task, unit_cost_usd: 0.002}
+documentation: {runbook: docs/runbooks/dataforseo-serp.md}

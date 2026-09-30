@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hop-platform"
+version = "0.1.0"
+description = "HKTDC Sports Footwear Hidden Opportunity Discovery Platform (HOP) - enterprise AI platform walking skeleton"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+dependencies = [
+    "pydantic>=2.9,<3",
+    "fastapi>=0.115,<1",
+    "uvicorn>=0.30,<1",
+    "typer>=0.12,<1",
+    "sqlalchemy>=2.0.30,<3",
+    "pyyaml>=6.0.1,<7",
+    "httpx>=0.27,<1",
+    "opentelemetry-api>=1.27,<2",
+    "opentelemetry-sdk>=1.27,<2",
+]
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.38,<2", "pandas>=2.2,<3", "altair>=5,<7"]
+postgres = ["psycopg[binary]>=3.2,<4"]
+s3 = ["boto3>=1.34,<2"]
+dev = ["pytest>=8,<9", "ruff>=0.6,<1"]
+
+[project.scripts]
+hop = "hop.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["hop*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = [".venv", "var"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "C4"]
+ignore = ["B008", "C408", "E501"]  # line length is owned by `ruff format`
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

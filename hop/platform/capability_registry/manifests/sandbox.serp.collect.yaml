@@ -1,0 +1,18 @@
+capability_id: sandbox.serp.collect
+version: 1.0.0
+kind: collector
+owner: data-platform-team
+status: approved
+purpose: Replay recorded DataForSEO-shaped SERP payloads from domain-pack sandbox fixtures (no network).
+input_schema: serp_collection_request_v1
+output_schema: serp_observation_v2
+permissions: [object_store.raw_write, fixtures.read]
+allowed_tools: [provider.fixture_read]
+evidence_classes: [SERP_RESULT, SERP_FEATURE]
+network_policy:
+  outbound_allowlist: []
+max_steps: 200
+max_duration_seconds: 300
+max_cost_usd: 2.0
+cost_model: {unit: provider_task, unit_cost_usd: 0.002, simulated: true}
+documentation: {runbook: docs/tutorials/first-sandbox-run.md}
