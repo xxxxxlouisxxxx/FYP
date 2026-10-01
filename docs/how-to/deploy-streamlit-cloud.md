@@ -13,8 +13,8 @@ free private-app slot; the password gate is what keeps the dashboard closed.
 
 1. Open [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
 2. Create an app from this repository.
-3. Use branch `cursor/hop-walking-skeleton-32a5` until the pull request is merged, then switch the
-   app to `main`.
+3. Use branch `cursor/password-locked-dashboard-32a5` until this change is on `main`, then switch
+   the app to `main`.
 4. Set the main file to `hop/products/opportunity_intelligence/dashboard/app.py`.
 5. Pick an app name that is hard to guess.
 6. In Advanced settings, select Python 3.12 and add secrets:
@@ -61,7 +61,7 @@ GitHub repo 係 public，所以程式碼係公開嘅。密碼只放喺 Streamlit
 
 1. 打開 [share.streamlit.io](https://share.streamlit.io)，用 GitHub 登入。
 2. 由呢個 repo 建立 app。
-3. Branch 用 `cursor/hop-walking-skeleton-32a5`。Pull request merge 之後先改做 `main`。
+3. Branch 用 `cursor/password-locked-dashboard-32a5`。呢個改動入咗 `main` 之後先改做 `main`。
 4. Main file 填 `hop/products/opportunity_intelligence/dashboard/app.py`。
 5. App 名揀一個唔好猜到嘅。
 6. Advanced settings 揀 Python 3.12，然後加 secrets：
