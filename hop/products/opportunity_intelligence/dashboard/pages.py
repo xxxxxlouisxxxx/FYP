@@ -467,10 +467,23 @@ def _decide(
 
 
 # 7. Platform Health & Governance ---------------------------------------------------------------
+def _reset_control(app: object) -> None:
+    from hop.products.opportunity_intelligence.dashboard.access import reset_sqlite_store, review_passcode
+
+    if not review_passcode() or not st.session_state.get("review_unlocked"):
+        return
+    st.caption("Reset deletes the local sandbox database. The next load rebuilds HK, SG and US from fixtures.")
+    if st.button("Reset sandbox data"):
+        reset_sqlite_store(app)  # type: ignore[arg-type]
+        st.cache_resource.clear()
+        st.rerun()
+
+
 def platform_health() -> None:
     app = get_app()
     p = app.platform
     st.title("Platform Health & Governance")
+    _reset_control(app)
     ok, n_events = p.audit.verify_chain()
     runs = p.runtime.list_runs(100)
     denied = p.policy.decisions(allowed=False, limit=200)
