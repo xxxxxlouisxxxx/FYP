@@ -1,4 +1,4 @@
-# HKTDC Sports Footwear Hidden Opportunity Discovery Platform (HOP)
+#  Sports Footwear Hidden Opportunity Discovery Platform (HOP)
 
 A runnable **walking skeleton** of the
 [Enterprise AI Platform Implementation Plan v4.0](docs/explanation/implementation-plan-v4.md). It
