@@ -94,6 +94,7 @@ tests/               unit, contract, policy (incl. prompt injection), e2e (pipel
 - How-to guides:
   - [add a market](docs/how-to/add-a-market.md)
   - [add a domain pack](docs/how-to/add-a-domain-pack.md)
+  - [deploy a password-locked dashboard](docs/how-to/deploy-streamlit-cloud.md)
   - [inspect a trace, test a rule, recover a run](docs/how-to/operate-runs.md)
 - Reference:
   - [CLI](docs/reference/cli.md)
@@ -170,6 +171,10 @@ make check                                      # ruff 同 pytest
 ### 使用真實數據（可選）
 
 設定 `DATAFORSEO_LOGIN` 同 `DATAFORSEO_PASSWORD` 就會用 DataForSEO 收集搜尋數據；設定 `OPENAI_API_KEY` 就會用 OpenAI 相容模型。冇設定就會自動用沙盒數據同模擬模型。
+
+### 私人 dashboard 連結
+
+想有一條網址俾自己或者指定嘅人用，睇 [部署到 Streamlit Community Cloud](docs/how-to/deploy-streamlit-cloud.md)。設定 `HOP_APP_PASSWORD` 之後，未輸入密碼只會見到密碼框。
 
 ### 限制
 

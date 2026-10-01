@@ -21,6 +21,16 @@ def get_app() -> App:
     return build_app()
 
 
+@st.cache_resource(show_spinner="Preparing sandbox markets (first start only)…")
+def ensure_demo_data() -> int:
+    """Seed HK, SG and US once per process when the store has no successful run."""
+    from hop.products.opportunity_intelligence.dashboard.access import seed_sandbox_markets
+
+    app = get_app()
+    seed_sandbox_markets(app)
+    return len(successful_runs(app))
+
+
 def fmt_metric(m: MeasuredValue | Proportion | None, pct: bool = True, fmt: str = "{:,.2f}") -> str:
     if m is None:
         return "missing (NOT_COLLECTED)"
