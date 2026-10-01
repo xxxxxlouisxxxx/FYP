@@ -1,0 +1,23 @@
+capability_id: gerp.extract
+version: 1.1.0
+kind: agent
+owner: ai-evaluation-team
+status: approved
+purpose: Extract primary/supporting recommendations, mentions and exclusions with evidence spans from untrusted answers.
+input_schema: gerp_extraction_request_v1
+output_schema: gerp_extraction_v1
+permissions: [model_gateway.invoke]
+allowed_tools: [model.invoke]
+evidence_classes: [GERP_PRIMARY_RECOMMENDATION, GERP_SUPPORTING_RECOMMENDATION, GERP_MENTION, GERP_EXCLUSION]
+network_policy:
+  outbound_allowlist: [api.openai.com]
+model_policy:
+  allowed_models: [mock-gerp-1, gpt-4o-mini]
+  max_input_chars: 12000
+  max_output_tokens: 900
+max_steps: 1
+max_duration_seconds: 60
+max_cost_usd: 0.05
+abstain_when: [schema_validation_failed, input_too_large]
+evaluation_suite: gerp-recommendation-v1
+cost_model: {unit: tokens}

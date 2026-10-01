@@ -1,0 +1,8 @@
+version: 1.0.0
+queries:
+- {query_id: q_humid_rain_shell_en, text: breathable rain jacket for humid weather, language: en, need_id: humid_rain_shell, markets: ["*"], query_sets: [core], intent: commercial_investigation}
+- {query_id: q_sun_hoodie_en, text: best UPF sun protection hoodie, language: en, need_id: sun_protection_hoodie, markets: ["*"], query_sets: [core], intent: commercial_investigation}
+- {query_id: q_kids_rain_suit_en, text: waterproof kids rain suit, language: en, need_id: kids_rain_suit, markets: ["*"], query_sets: [core], intent: commercial}
+- {query_id: q_packable_down_en, text: packable down jacket for travel, language: en, need_id: packable_down_travel, markets: ["*"], query_sets: [core], intent: commercial}
+- {query_id: q_merino_base_layer_en, text: merino wool base layer, language: en, need_id: merino_base_layer, markets: ["*"], query_sets: [core], intent: commercial_investigation}
+- {query_id: q_plus_size_hiking_pants_en, text: plus size hiking pants, language: en, need_id: plus_size_hiking_pants, markets: ["*"], query_sets: [core], intent: commercial_investigation}

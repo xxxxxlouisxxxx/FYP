@@ -1,0 +1,135 @@
+version: 1.0.0
+entities:
+- entity_id: nike
+  name: Nike
+  origin: US
+  domains: [nike.com]
+  products: [Vaporfly, Alphafly, Pegasus, Invincible, Structure]
+  aliases:
+  - {alias: Nike}
+  - {alias: 耐克, language: zh-Hant}
+- entity_id: adidas
+  name: adidas
+  origin: DE
+  domains: [adidas.com, adidas.com.hk]
+  products: [Adizero Adios Pro, Boston, Ultraboost, Supernova]
+  aliases:
+  - {alias: adidas}
+  - {alias: 愛迪達, language: zh-Hant}
+- entity_id: asics
+  name: ASICS
+  origin: JP
+  domains: [asics.com]
+  products: [Gel-Kayano, Gel-Nimbus, Metaspeed, GT-2000, Gel-Trabuco]
+  aliases:
+  - {alias: ASICS}
+  - {alias: 亞瑟士, language: zh-Hant}
+- entity_id: hoka
+  name: HOKA
+  origin: FR
+  domains: [hoka.com]
+  products: [Bondi, Clifton, Speedgoat, Arahi, Rocket X]
+  aliases:
+  - {alias: HOKA}
+  - {alias: HOKA ONE ONE}
+- entity_id: brooks
+  name: Brooks
+  origin: US
+  domains: [brooksrunning.com]
+  products: [Ghost, Glycerin, Adrenaline GTS, Cascadia]
+  aliases:
+  - {alias: Brooks}
+- entity_id: new_balance
+  name: New Balance
+  origin: US
+  domains: [newbalance.com, newbalance.com.hk]
+  products: [Fresh Foam X 880, Fresh Foam X 1080, FuelCell SC Elite]
+  aliases:
+  - {alias: New Balance}
+  - {alias: 紐巴倫, language: zh-Hant}
+- entity_id: saucony
+  name: Saucony
+  origin: US
+  domains: [saucony.com]
+  products: [Endorphin Pro, Endorphin Speed, Guide, Peregrine]
+  aliases:
+  - {alias: Saucony}
+- entity_id: on_running
+  name: "On"
+  origin: CH
+  domains: [on.com]
+  products: [Cloudmonster, Cloudflyer, Cloudsurfer, Cloudultra]
+  aliases:
+  - {alias: On Running}
+  - alias: "On"
+    ambiguous: true
+    case_sensitive: true
+    context_patterns: ['^\s*(Cloud\w+|Running)\b']
+- entity_id: altra
+  name: Altra
+  origin: US
+  domains: [altrarunning.com]
+  products: [Escalante, Torin, Lone Peak, Via Olympus]
+  aliases:
+  - {alias: Altra}
+- entity_id: topo_athletic
+  name: Topo Athletic
+  origin: US
+  domains: [topoathletic.com]
+  products: [Phantom, Ultraventure, Magnifly]
+  aliases:
+  - {alias: Topo Athletic}
+  - {alias: Topo}
+- entity_id: mizuno
+  name: Mizuno
+  origin: JP
+  domains: [mizuno.com]
+  products: [Wave Rider, Wave Inspire, Neo Vista]
+  aliases:
+  - {alias: Mizuno}
+- entity_id: salomon
+  name: Salomon
+  origin: FR
+  domains: [salomon.com]
+  products: [Speedcross, Sense Ride, XA Pro]
+  aliases:
+  - {alias: Salomon}
+- entity_id: li_ning
+  name: Li-Ning
+  origin: CN
+  domains: [lining.com]
+  products: [Feidian, Chitu, Red Hare]
+  aliases:
+  - {alias: Li-Ning}
+  - {alias: Li Ning}
+  - {alias: 李寧, language: zh-Hant}
+- entity_id: anta
+  name: ANTA
+  origin: CN
+  domains: [anta.com]
+  products: [C202, Mach]
+  aliases:
+  - {alias: ANTA}
+  - {alias: 安踏, language: zh-Hant}
+- entity_id: allbirds
+  name: Allbirds
+  origin: US
+  domains: [allbirds.com]
+  products: [Tree Dasher, Tree Flyer]
+  aliases:
+  - {alias: Allbirds}
+- entity_id: decathlon_kiprun
+  name: Decathlon Kiprun
+  origin: FR
+  domains: [decathlon.com, decathlon.com.hk, decathlon.sg]
+  products: [KS900, KD900, Jogflow]
+  aliases:
+  - {alias: Kiprun}
+  - {alias: Decathlon}
+- entity_id: skechers
+  name: Skechers
+  origin: US
+  domains: [skechers.com]
+  products: [GOrun, Max Cushioning]
+  aliases:
+  - {alias: Skechers}

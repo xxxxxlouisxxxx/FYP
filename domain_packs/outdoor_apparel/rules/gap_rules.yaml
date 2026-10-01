@@ -1,0 +1,102 @@
+# Versioned, deterministic gap rules. Conditions on missing metrics evaluate to UNKNOWN (never zero),
+# so a rule whose inputs are missing cannot fire. `field` selects rate / ci_low / ci_high for proportions.
+rule_sets:
+- rule_set_id: apparel-gap-rule-v1
+  version: 1.0.0
+  owner: domain-product-owner-apparel
+  status: approved
+  rules:
+  - rule_id: high_demand_weak_serp
+    version: 1.0.0
+    gap_family: HIGH_DEMAND_WEAK_SERP_SUPPLY
+    scope: need
+    description: Demand is strong but few top-10 results are on-need product supply pages.
+    signal_families: [demand, serp]
+    all_of:
+    - {metric: demand.index, op: ">=", value: 0.55}
+    - {metric: serp.supply_share, field: rate, op: "<=", value: 0.40}
+    tests:
+    - name: fires on strong demand and weak supply
+      metrics: {demand.index: 0.8, serp.supply_share: 0.2}
+      expected: true
+    - name: does not fire when supply is healthy
+      metrics: {demand.index: 0.8, serp.supply_share: 0.7}
+      expected: false
+    - name: missing demand is unknown, not zero
+      metrics: {demand.index: null, serp.supply_share: 0.1}
+      expected: false
+  - rule_id: high_demand_weak_gerp
+    version: 1.0.0
+    gap_family: HIGH_DEMAND_WEAK_GERP_COVERAGE
+    scope: need
+    description: Demand is strong but generative answers rarely give a concrete recommendation.
+    signal_families: [demand, gerp]
+    all_of:
+    - {metric: demand.index, op: ">=", value: 0.55}
+    - {metric: gerp.recommendation_coverage, field: rate, op: "<=", value: 0.50}
+    tests:
+    - name: fires on generic answers
+      metrics: {demand.index: 0.7, gerp.recommendation_coverage: 0.33}
+      expected: true
+    - name: does not fire on well-covered need
+      metrics: {demand.index: 0.7, gerp.recommendation_coverage: 1.0}
+      expected: false
+  - rule_id: no_dominant_brand
+    version: 1.0.0
+    gap_family: NO_DOMINANT_SUPPLYING_BRAND
+    scope: need
+    description: Meaningful demand, and brand visibility across SERP is fragmented (low HHI).
+    signal_families: [demand, serp]
+    all_of:
+    - {metric: demand.index, op: ">=", value: 0.45}
+    - {metric: serp.brand_hhi, op: "<", value: 0.20}
+    - {metric: serp.brand_mentions, op: ">=", value: 5}
+    tests:
+    - name: fragmented market
+      metrics: {demand.index: 0.6, serp.brand_hhi: 0.12, serp.brand_mentions: 9}
+      expected: true
+    - name: concentrated market
+      metrics: {demand.index: 0.6, serp.brand_hhi: 0.45, serp.brand_mentions: 9}
+      expected: false
+  - rule_id: gerp_weak_search_support
+    version: 1.0.0
+    gap_family: GERP_RECOMMENDATION_WEAK_SEARCH_SUPPORT
+    scope: need
+    description: Generative engines recommend products, but their citations are rarely found in the SERP.
+    signal_families: [gerp, serp]
+    all_of:
+    - {metric: gerp.recommendation_coverage, field: rate, op: ">=", value: 0.60}
+    - {metric: gerp.citation_support, field: rate, op: "<=", value: 0.35}
+    tests:
+    - name: unsupported recommendations
+      metrics: {gerp.recommendation_coverage: 1.0, gerp.citation_support: 0.2}
+      expected: true
+  - rule_id: serp_visible_gerp_absent
+    version: 1.0.0
+    gap_family: SERP_VISIBLE_GERP_ABSENT
+    scope: brand
+    description: A brand is visible in the SERP for a need but never recommended by generative engines.
+    signal_families: [serp, gerp]
+    all_of:
+    - {metric: serp.brand_share, field: rate, op: ">=", value: 0.20}
+    - {metric: gerp.brand_recommendation_rate, field: rate, op: "==", value: 0.0}
+    - {metric: gerp.answers, op: ">=", value: 3}
+    tests:
+    - name: visible but never recommended
+      metrics: {serp.brand_share: 0.3, gerp.brand_recommendation_rate: 0.0, gerp.answers: 3}
+      expected: true
+    - name: recommended at least once
+      metrics: {serp.brand_share: 0.3, gerp.brand_recommendation_rate: 0.33, gerp.answers: 3}
+      expected: false
+  - rule_id: weak_serp_supply_only
+    version: 1.0.0
+    gap_family: WEAK_SERP_SUPPLY_SINGLE_SIGNAL
+    scope: need
+    description: Weak on-need SERP supply observed without a second corroborating signal family.
+    signal_families: [serp]
+    all_of:
+    - {metric: serp.supply_share, field: rate, op: "<=", value: 0.30}
+    tests:
+    - name: single-family signal
+      metrics: {serp.supply_share: 0.1}
+      expected: true

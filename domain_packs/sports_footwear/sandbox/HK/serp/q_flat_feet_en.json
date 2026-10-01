@@ -1,0 +1,227 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-f26c948e68c7",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "stability running shoes for flat feet",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "stability running shoes for flat feet",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=stability-running-shoes-for-flat-feet",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "shopping"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 12,
+     "items": [
+      {
+       "type": "shopping",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "items": [
+        {
+         "type": "shopping_element",
+         "title": "Brooks Adrenaline GTS 24",
+         "price": 129.0
+        },
+        {
+         "type": "shopping_element",
+         "title": "Saucony Guide 17",
+         "price": 129.0
+        },
+        {
+         "type": "shopping_element",
+         "title": "HOKA Arahi 7",
+         "price": 129.0
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "Brooks Adrenaline GTS 24 Stability Overpronation Running Shoe",
+       "url": "https://www.hktvmall.com/brooks-adrenaline-gts-24-stability-overpronation-running-sho",
+       "description": "Shop the Brooks Adrenaline GTS 24 with stability guidance rails and arch support for flat feet. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.hktvmall.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.asics.com",
+       "title": "ASICS Gel-Kayano 31 | ASICS Hong Kong",
+       "url": "https://www.asics.com/asics-gel-kayano-31---asics-hong-kong",
+       "description": "The ASICS Gel-Kayano 31 for everyday training.",
+       "breadcrumb": "https://www.asics.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.saucony.com",
+       "title": "Saucony Guide 17 Stability Overpronation Running Shoe",
+       "url": "https://www.saucony.com/saucony-guide-17-stability-overpronation-running-shoe",
+       "description": "Shop the Saucony Guide 17 with stability guidance rails and arch support for flat feet. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.saucony.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best stability running shoes for flat feet?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy stability running shoes for flat feet in Hong Kong?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Flat feet runners - what stability shoe? - LIHKG",
+       "url": "https://lihkg.com/flat-feet-runners---what-stability-shoe----lihkg",
+       "description": "Thread: runners in Hong Kong discuss stability running shoes for flat feet; most replies say local shops have few options.",
+       "breadcrumb": "https://lihkg.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.zalora.com.hk",
+       "title": "HOKA Arahi 7 Stability Overpronation Running Shoe",
+       "url": "https://www.zalora.com.hk/hoka-arahi-7-stability-overpronation-running-shoe",
+       "description": "Shop the HOKA Arahi 7 with stability guidance rails and arch support for flat feet. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.zalora.com.hk › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.zalora.com.hk",
+       "title": "ASICS Gel-Kayano 31 Men's Running Shoe",
+       "url": "https://www.zalora.com.hk/asics-gel-kayano-31-men-s-running-shoe",
+       "description": "ASICS Gel-Kayano 31 available now.",
+       "breadcrumb": "https://www.zalora.com.hk › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.mizuno.com",
+       "title": "Mizuno Wave Inspire 21 Stability Overpronation Running Shoe",
+       "url": "https://www.mizuno.com/mizuno-wave-inspire-21-stability-overpronation-running-shoe",
+       "description": "Shop the Mizuno Wave Inspire 21 with stability guidance rails and arch support for flat feet. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.mizuno.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "Best Stability Shoes for Flat Feet | RunRepeat",
+       "url": "https://www.runrepeat.com/best-stability-shoes-for-flat-feet---runrepeat",
+       "description": "Lab-tested guide to stability running shoes for flat feet with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.escapade.com.hk",
+       "title": "New Balance 860v14 Stability Overpronation Running Shoe",
+       "url": "https://www.escapade.com.hk/new-balance-860v14-stability-overpronation-running-shoe",
+       "description": "Shop the New Balance 860v14 with stability guidance rails and arch support for flat feet. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.escapade.com.hk › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.brooksrunning.com",
+       "title": "Brooks Adrenaline GTS 24 Stability Overpronation Running Shoe",
+       "url": "https://www.brooksrunning.com/brooks-adrenaline-gts-24-stability-overpronation-running-sho",
+       "description": "Shop the Brooks Adrenaline GTS 24 with stability guidance rails and arch support for flat feet. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.brooksrunning.com › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

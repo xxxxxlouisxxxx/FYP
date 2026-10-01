@@ -1,0 +1,13 @@
+capability_id: experimental.web_browse
+version: 0.1.0
+kind: agent
+owner: ai-evaluation-team
+status: draft
+purpose: Draft capability kept to demonstrate that non-approved capabilities cannot execute.
+input_schema: none
+output_schema: none
+allowed_tools: [http.get]
+network_policy:
+  outbound_allowlist: [example.com]
+max_steps: 3
+max_cost_usd: 0.0

@@ -1,0 +1,13 @@
+capability_id: opportunity.gap_detection
+version: 3.0.0
+kind: rule
+owner: domain-product-owner-footwear
+status: approved
+purpose: Deterministic, versioned gap-rule evaluation over computed metrics.
+input_schema: metric_results_v1
+output_schema: gap_candidate_v1
+allowed_tools: []
+network_policy:
+  outbound_allowlist: []
+max_steps: 1
+max_cost_usd: 0.0

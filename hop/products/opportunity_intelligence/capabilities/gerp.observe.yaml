@@ -1,0 +1,24 @@
+capability_id: gerp.observe
+version: 1.0.0
+kind: agent
+owner: ai-evaluation-team
+status: approved
+purpose: Run governed prompts against a generative engine and capture its answer and citations.
+input_schema: gerp_observation_request_v1
+output_schema: gerp_answer_v1
+permissions: [model_gateway.invoke, object_store.raw_write]
+allowed_tools: [model.invoke]
+evidence_classes: [GERP_ANSWER, GERP_CITATION]
+network_policy:
+  outbound_allowlist: [api.openai.com]
+model_policy:
+  allowed_models: [mock-gerp-1, gpt-4o-mini]
+  max_input_chars: 4000
+  max_output_tokens: 700
+max_steps: 1
+max_duration_seconds: 60
+max_cost_usd: 0.05
+abstain_when: [no_answer, schema_validation_failed, budget_exceeded]
+evaluation_suite: gerp-recommendation-v1
+slo: {availability: 0.98}
+cost_model: {unit: tokens}

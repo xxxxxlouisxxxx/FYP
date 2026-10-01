@@ -1,0 +1,68 @@
+# Local stack: API + dashboard on Postgres, with Redis reserved for the Phase 2 task queue.
+#   docker compose -f infrastructure/docker-compose.yml up --build
+# Provider credentials are optional; without them the sandbox provider and mock model are used.
+name: hop
+
+x-hop-env: &hop-env
+  HOP_ENV: sandbox
+  HOP_DATA_DIR: /data
+  DATABASE_URL: postgresql+psycopg://hop:hop@postgres:5432/hop
+  HOP_OBJECT_STORE_DIR: /data/objects
+  REDIS_URL: redis://redis:6379/0
+  DATAFORSEO_LOGIN: ${DATAFORSEO_LOGIN:-}
+  DATAFORSEO_PASSWORD: ${DATAFORSEO_PASSWORD:-}
+  OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+  HOP_SERP_PROVIDER: ${HOP_SERP_PROVIDER:-auto}
+  HOP_MODEL_PROVIDER: ${HOP_MODEL_PROVIDER:-auto}
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: infrastructure/containers/Dockerfile
+    image: hop-platform:local
+    environment: *hop-env
+    ports: ["${HOP_API_PORT:-8000}:8000"]
+    volumes: [hop-data:/data]
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+
+  dashboard:
+    image: hop-platform:local
+    command: ["streamlit", "run", "hop/products/opportunity_intelligence/dashboard/app.py",
+              "--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true"]
+    environment: *hop-env
+    ports: ["${HOP_DASHBOARD_PORT:-8501}:8501"]
+    volumes: [hop-data:/data]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=4)"]
+      interval: 30s
+      timeout: 5s
+    depends_on:
+      app: {condition: service_healthy}
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: hop
+      POSTGRES_PASSWORD: hop
+      POSTGRES_DB: hop
+    volumes: [pg-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hop -d hop"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  hop-data:
+  pg-data:

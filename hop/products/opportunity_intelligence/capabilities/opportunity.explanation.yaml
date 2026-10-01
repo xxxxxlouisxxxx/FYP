@@ -1,0 +1,20 @@
+capability_id: opportunity.explanation
+version: 1.0.0
+kind: agent
+owner: domain-product-owner-footwear
+status: approved
+purpose: Produce evidence-linked Opportunity Card summaries without introducing new facts.
+input_schema: opportunity_facts_v1
+output_schema: explanation_v1
+permissions: [model_gateway.invoke]
+allowed_tools: [model.invoke]
+network_policy:
+  outbound_allowlist: [api.openai.com]
+model_policy:
+  allowed_models: [mock-gerp-1, gpt-4o-mini]
+  max_input_chars: 12000
+  max_output_tokens: 400
+max_steps: 1
+max_duration_seconds: 60
+max_cost_usd: 0.05
+abstain_when: [unsupported_claim_detected]

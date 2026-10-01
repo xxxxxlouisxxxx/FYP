@@ -1,0 +1,258 @@
+{
+  "$defs": {
+    "Device": {
+      "enum": [
+        "mobile",
+        "desktop"
+      ],
+      "title": "Device",
+      "type": "string"
+    },
+    "SignalFamily": {
+      "enum": [
+        "demand",
+        "serp",
+        "gerp"
+      ],
+      "title": "SignalFamily",
+      "type": "string"
+    },
+    "ValueState": {
+      "enum": [
+        "OBSERVED_ZERO",
+        "OBSERVED_VALUE",
+        "NOT_COLLECTED",
+        "PROVIDER_ERROR",
+        "PARSING_FAILED",
+        "NOT_APPLICABLE",
+        "SUPPRESSED_BY_POLICY",
+        "INSUFFICIENT_SAMPLE"
+      ],
+      "title": "ValueState",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "One provider or model observation. Raw bytes live in the object store, referenced by hash.",
+  "properties": {
+    "content_hash": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Content Hash"
+    },
+    "cost_usd": {
+      "default": 0.0,
+      "title": "Cost Usd",
+      "type": "number"
+    },
+    "device": {
+      "$ref": "#/$defs/Device"
+    },
+    "endpoint": {
+      "title": "Endpoint",
+      "type": "string"
+    },
+    "error": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Error"
+    },
+    "language": {
+      "title": "Language",
+      "type": "string"
+    },
+    "locale": {
+      "title": "Locale",
+      "type": "string"
+    },
+    "market": {
+      "title": "Market",
+      "type": "string"
+    },
+    "model_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model Id"
+    },
+    "need_id": {
+      "title": "Need Id",
+      "type": "string"
+    },
+    "observation_id": {
+      "title": "Observation Id",
+      "type": "string"
+    },
+    "observed_at": {
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+    },
+    "parser_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Parser Version"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    },
+    "prompt_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Id"
+    },
+    "prompt_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Version"
+    },
+    "provider": {
+      "title": "Provider",
+      "type": "string"
+    },
+    "provider_task_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Provider Task Id"
+    },
+    "quality_flags": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Quality Flags",
+      "type": "array"
+    },
+    "query_id": {
+      "title": "Query Id",
+      "type": "string"
+    },
+    "query_text": {
+      "title": "Query Text",
+      "type": "string"
+    },
+    "raw_artifact_uri": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Raw Artifact Uri"
+    },
+    "repeat_index": {
+      "default": 0,
+      "title": "Repeat Index",
+      "type": "integer"
+    },
+    "retry_count": {
+      "default": 0,
+      "title": "Retry Count",
+      "type": "integer"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "observation_v1",
+      "default": "observation_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "signal_family": {
+      "$ref": "#/$defs/SignalFamily"
+    },
+    "simulated": {
+      "default": false,
+      "title": "Simulated",
+      "type": "boolean"
+    },
+    "status": {
+      "$ref": "#/$defs/ValueState"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    }
+  },
+  "required": [
+    "observation_id",
+    "run_id",
+    "signal_family",
+    "provider",
+    "endpoint",
+    "market",
+    "locale",
+    "language",
+    "device",
+    "query_id",
+    "query_text",
+    "need_id",
+    "observed_at",
+    "status"
+  ],
+  "title": "Observation",
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+version: 1.0.0
+dataset_id: entity-resolution-golden
+cases:
+- {id: e01, text: "HOKA ONE ONE Bondi 8 review", surface: HOKA ONE ONE, expected_entity: hoka, expected_status: RESOLVED}
+- {id: e02, text: "Best Hoka shoes for 2026", surface: Hoka, expected_entity: hoka, expected_status: RESOLVED}
+- {id: e03, text: "On Cloudmonster 2 in stock", surface: "On", expected_entity: on_running, expected_status: RESOLVED}
+- {id: e04, text: "On a budget, try entry-level trainers", surface: "On", expected_entity: null, expected_status: AMBIGUOUS}
+- {id: e05, text: "On is a Swiss brand", surface: "On", expected_entity: null, expected_status: AMBIGUOUS}
+- {id: e06, text: "On Running launched a new shoe", surface: On Running, expected_entity: on_running, expected_status: RESOLVED}
+- {id: e07, text: "李寧 赤兔 7 跑鞋", surface: 李寧, expected_entity: li_ning, expected_status: RESOLVED}
+- {id: e08, text: "Li Ning Feidian 4 Elite", surface: Li Ning, expected_entity: li_ning, expected_status: RESOLVED}
+- {id: e09, text: "亞瑟士 Gel-Kayano 31", surface: 亞瑟士, expected_entity: asics, expected_status: RESOLVED}
+- {id: e10, text: "Asics Gel-Nimbus", surface: Asics, expected_entity: asics, expected_status: RESOLVED}
+- {id: e11, text: "new balance 880 wide", surface: new balance, expected_entity: new_balance, expected_status: RESOLVED}
+- {id: e12, text: "Topo Phantom 3", surface: Topo, expected_entity: topo_athletic, expected_status: RESOLVED}
+- {id: e13, text: "Kiprun KS900 Light", surface: Kiprun, expected_entity: decathlon_kiprun, expected_status: RESOLVED}
+- {id: e14, text: "Reebok Floatride Energy", surface: Reebok, expected_entity: null, expected_status: UNRESOLVED}
+- {id: e15, text: "Under Armour HOVR", surface: Under Armour, expected_entity: null, expected_status: UNRESOLVED}
+- {id: e16, text: "On Cloudflyer 5", surface: "On", expected_entity: on_running, expected_status: RESOLVED}

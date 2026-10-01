@@ -1,0 +1,227 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-4c09d4ef2cff",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "waterproof trail running shoes",
+    "location_code": 2702,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "waterproof trail running shoes",
+     "type": "organic",
+     "se_domain": "google.com.sg",
+     "location_code": 2702,
+     "language_code": "en",
+     "check_url": "https://www.google.com.sg/search?q=waterproof-trail-running-shoes",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask",
+      "shopping"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 12,
+     "items": [
+      {
+       "type": "shopping",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "items": [
+        {
+         "type": "shopping_element",
+         "title": "Salomon Speedcross 6 GTX",
+         "price": 129.0
+        },
+        {
+         "type": "shopping_element",
+         "title": "HOKA Speedgoat 6 GTX",
+         "price": 129.0
+        },
+        {
+         "type": "shopping_element",
+         "title": "ASICS Gel-Trabuco 12 GTX",
+         "price": 129.0
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "www.zalora.sg",
+       "title": "Salomon Speedcross 6 GTX GORE-TEX Waterproof Trail Running Shoe",
+       "url": "https://www.zalora.sg/salomon-speedcross-6-gtx-gore-tex-waterproof-trail-running-s",
+       "description": "Shop the Salomon Speedcross 6 GTX with a waterproof GORE-TEX membrane and deep trail lugs. Free delivery in Singapore.",
+       "breadcrumb": "https://www.zalora.sg › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "forums.hardwarezone.com.sg",
+       "title": "Waterproof trail shoes for rainy season hikes? - FORUMS",
+       "url": "https://forums.hardwarezone.com.sg/waterproof-trail-shoes-for-rainy-season-hikes----forums",
+       "description": "Thread: runners in Singapore discuss waterproof trail running shoes; most replies say local shops have few options.",
+       "breadcrumb": "https://forums.hardwarezone.com.sg › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.hoka.com",
+       "title": "HOKA Speedgoat 6 GTX GORE-TEX Waterproof Trail Running Shoe",
+       "url": "https://www.hoka.com/hoka-speedgoat-6-gtx-gore-tex-waterproof-trail-running-shoe",
+       "description": "Shop the HOKA Speedgoat 6 GTX with a waterproof GORE-TEX membrane and deep trail lugs. Free delivery in Singapore.",
+       "breadcrumb": "https://www.hoka.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best waterproof trail running shoes?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy waterproof trail running shoes in Singapore?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "Best Waterproof Trail Running Shoes | RunRepeat",
+       "url": "https://www.runrepeat.com/best-waterproof-trail-running-shoes---runrepeat",
+       "description": "Lab-tested guide to waterproof trail running shoes with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.runninglab.sg",
+       "title": "ASICS Gel-Trabuco 12 GTX GORE-TEX Waterproof Trail Running Shoe",
+       "url": "https://www.runninglab.sg/asics-gel-trabuco-12-gtx-gore-tex-waterproof-trail-running-s",
+       "description": "Shop the ASICS Gel-Trabuco 12 GTX with a waterproof GORE-TEX membrane and deep trail lugs. Free delivery in Singapore.",
+       "breadcrumb": "https://www.runninglab.sg › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.straitstimes.com",
+       "title": "Runners in Singapore struggle to find waterproof trail running shoes",
+       "url": "https://www.straitstimes.com/runners-in-singapore-struggle-to-find-waterproof-trail-runni",
+       "description": "Local runners say choice of waterproof trail running shoes is limited.",
+       "breadcrumb": "https://www.straitstimes.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.brooksrunning.com",
+       "title": "Brooks Cascadia 18 GTX GORE-TEX Waterproof Trail Running Shoe",
+       "url": "https://www.brooksrunning.com/brooks-cascadia-18-gtx-gore-tex-waterproof-trail-running-sho",
+       "description": "Shop the Brooks Cascadia 18 GTX with a waterproof GORE-TEX membrane and deep trail lugs. Free delivery in Singapore.",
+       "breadcrumb": "https://www.brooksrunning.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.runnersworld.com",
+       "title": "Best Waterproof Trail Running Shoes | Runner's World",
+       "url": "https://www.runnersworld.com/best-waterproof-trail-running-shoes---runner-s-world",
+       "description": "Our editors pick waterproof trail running shoes after testing.",
+       "breadcrumb": "https://www.runnersworld.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.lazada.sg",
+       "title": "Saucony Peregrine 14 GTX GORE-TEX Waterproof Trail Running Shoe",
+       "url": "https://www.lazada.sg/saucony-peregrine-14-gtx-gore-tex-waterproof-trail-running-s",
+       "description": "Shop the Saucony Peregrine 14 GTX with a waterproof GORE-TEX membrane and deep trail lugs. Free delivery in Singapore.",
+       "breadcrumb": "https://www.lazada.sg › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.salomon.com",
+       "title": "Salomon Speedcross 6 GTX GORE-TEX Waterproof Trail Running Shoe",
+       "url": "https://www.salomon.com/salomon-speedcross-6-gtx-gore-tex-waterproof-trail-running-s",
+       "description": "Shop the Salomon Speedcross 6 GTX with a waterproof GORE-TEX membrane and deep trail lugs. Free delivery in Singapore.",
+       "breadcrumb": "https://www.salomon.com › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

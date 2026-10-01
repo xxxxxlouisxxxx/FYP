@@ -1,0 +1,118 @@
+{
+  "$defs": {
+    "ActorType": {
+      "enum": [
+        "HUMAN",
+        "SYSTEM",
+        "AGENT"
+      ],
+      "title": "ActorType",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Append-only, hash-chained audit record.",
+  "properties": {
+    "action": {
+      "title": "Action",
+      "type": "string"
+    },
+    "actor": {
+      "title": "Actor",
+      "type": "string"
+    },
+    "actor_type": {
+      "$ref": "#/$defs/ActorType"
+    },
+    "details": {
+      "additionalProperties": true,
+      "title": "Details",
+      "type": "object"
+    },
+    "event_hash": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Event Hash"
+    },
+    "event_id": {
+      "title": "Event Id",
+      "type": "string"
+    },
+    "occurred_at": {
+      "format": "date-time",
+      "title": "Occurred At",
+      "type": "string"
+    },
+    "outcome": {
+      "default": "SUCCESS",
+      "enum": [
+        "SUCCESS",
+        "DENIED",
+        "FAILURE"
+      ],
+      "title": "Outcome",
+      "type": "string"
+    },
+    "prev_event_hash": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prev Event Hash"
+    },
+    "resource_id": {
+      "title": "Resource Id",
+      "type": "string"
+    },
+    "resource_type": {
+      "title": "Resource Type",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "audit_event_v1",
+      "default": "audit_event_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "tenant_id": {
+      "default": "hktdc",
+      "title": "Tenant Id",
+      "type": "string"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    }
+  },
+  "required": [
+    "actor",
+    "actor_type",
+    "action",
+    "resource_type",
+    "resource_id"
+  ],
+  "title": "AuditEvent",
+  "type": "object"
+}

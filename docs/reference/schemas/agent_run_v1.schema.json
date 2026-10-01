@@ -1,0 +1,234 @@
+{
+  "$defs": {
+    "AgentRunStatus": {
+      "enum": [
+        "SUCCEEDED",
+        "ABSTAINED",
+        "FAILED",
+        "DENIED"
+      ],
+      "title": "AgentRunStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "abstention_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Abstention Reason"
+    },
+    "agent_run_id": {
+      "title": "Agent Run Id",
+      "type": "string"
+    },
+    "capability_id": {
+      "title": "Capability Id",
+      "type": "string"
+    },
+    "capability_version": {
+      "title": "Capability Version",
+      "type": "string"
+    },
+    "cost_usd": {
+      "default": 0.0,
+      "title": "Cost Usd",
+      "type": "number"
+    },
+    "ended_at": {
+      "format": "date-time",
+      "title": "Ended At",
+      "type": "string"
+    },
+    "latency_ms": {
+      "title": "Latency Ms",
+      "type": "number"
+    },
+    "max_steps": {
+      "title": "Max Steps",
+      "type": "integer"
+    },
+    "model_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model Id"
+    },
+    "payload_uri": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Payload Uri"
+    },
+    "prompt_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Id"
+    },
+    "prompt_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Version"
+    },
+    "provider": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Provider"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "string"
+    },
+    "request_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Request Hash"
+    },
+    "response_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Response Hash"
+    },
+    "retry_count": {
+      "default": 0,
+      "title": "Retry Count",
+      "type": "integer"
+    },
+    "run_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Run Id"
+    },
+    "schema_version": {
+      "const": "agent_run_v1",
+      "default": "agent_run_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "simulated": {
+      "default": false,
+      "title": "Simulated",
+      "type": "boolean"
+    },
+    "span_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Span Id"
+    },
+    "started_at": {
+      "format": "date-time",
+      "title": "Started At",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/AgentRunStatus"
+    },
+    "steps": {
+      "default": 0,
+      "title": "Steps",
+      "type": "integer"
+    },
+    "tokens_in": {
+      "default": 0,
+      "title": "Tokens In",
+      "type": "integer"
+    },
+    "tokens_out": {
+      "default": 0,
+      "title": "Tokens Out",
+      "type": "integer"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    }
+  },
+  "required": [
+    "capability_id",
+    "capability_version",
+    "purpose",
+    "status",
+    "started_at",
+    "ended_at",
+    "latency_ms",
+    "max_steps"
+  ],
+  "title": "AgentRun",
+  "type": "object"
+}

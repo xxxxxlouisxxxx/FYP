@@ -1,0 +1,707 @@
+{
+  "$defs": {
+    "AdmissionOutcome": {
+      "enum": [
+        "PENDING",
+        "ADMITTED",
+        "NOT_ADMITTED",
+        "QUARANTINED",
+        "REJECTED"
+      ],
+      "title": "AdmissionOutcome",
+      "type": "string"
+    },
+    "CounterEvidenceStatus": {
+      "enum": [
+        "NOT_RUN",
+        "COMPLETED",
+        "UNAVAILABLE"
+      ],
+      "title": "CounterEvidenceStatus",
+      "type": "string"
+    },
+    "DataQualityStatus": {
+      "enum": [
+        "PASSED",
+        "WARNING",
+        "FAILED_NON_CRITICAL",
+        "FAILED_CRITICAL",
+        "QUARANTINED"
+      ],
+      "title": "DataQualityStatus",
+      "type": "string"
+    },
+    "GateResult": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        },
+        "gate_id": {
+          "title": "Gate Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "severity": {
+          "default": "standard",
+          "enum": [
+            "critical",
+            "standard"
+          ],
+          "title": "Severity",
+          "type": "string"
+        }
+      },
+      "required": [
+        "gate_id",
+        "label",
+        "passed",
+        "detail"
+      ],
+      "title": "GateResult",
+      "type": "object"
+    },
+    "MeasuredValue": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "measured",
+          "default": "measured",
+          "title": "Kind",
+          "type": "string"
+        },
+        "n": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Number of underlying observations",
+          "title": "N"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "state": {
+          "$ref": "#/$defs/ValueState"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "MeasuredValue",
+      "type": "object"
+    },
+    "Proportion": {
+      "additionalProperties": false,
+      "description": "A rate that always travels with its sample size and Wilson interval.",
+      "properties": {
+        "ci_high": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ci High"
+        },
+        "ci_low": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ci Low"
+        },
+        "confidence": {
+          "default": 0.95,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "exploratory": {
+          "default": false,
+          "title": "Exploratory",
+          "type": "boolean"
+        },
+        "kind": {
+          "const": "proportion",
+          "default": "proportion",
+          "title": "Kind",
+          "type": "string"
+        },
+        "method": {
+          "const": "wilson",
+          "default": "wilson",
+          "title": "Method",
+          "type": "string"
+        },
+        "n": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "N"
+        },
+        "rate": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rate"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "state": {
+          "$ref": "#/$defs/ValueState"
+        },
+        "successes": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Successes"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "Proportion",
+      "type": "object"
+    },
+    "RiskPenalty": {
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "title": "Amount",
+          "type": "number"
+        },
+        "applied": {
+          "title": "Applied",
+          "type": "boolean"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "observed": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Observed"
+        },
+        "penalty_id": {
+          "title": "Penalty Id",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "penalty_id",
+        "label",
+        "amount",
+        "applied",
+        "observed",
+        "reason"
+      ],
+      "title": "RiskPenalty",
+      "type": "object"
+    },
+    "ScoreBreakdown": {
+      "additionalProperties": false,
+      "properties": {
+        "components": {
+          "items": {
+            "$ref": "#/$defs/ScoreComponent"
+          },
+          "title": "Components",
+          "type": "array"
+        },
+        "formula": {
+          "title": "Formula",
+          "type": "string"
+        },
+        "gross": {
+          "title": "Gross",
+          "type": "number"
+        },
+        "penalties": {
+          "items": {
+            "$ref": "#/$defs/RiskPenalty"
+          },
+          "title": "Penalties",
+          "type": "array"
+        },
+        "priority": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ],
+          "title": "Priority",
+          "type": "string"
+        },
+        "score_version": {
+          "title": "Score Version",
+          "type": "string"
+        },
+        "sensitivity": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "score change if each weight +0.05",
+          "title": "Sensitivity",
+          "type": "object"
+        },
+        "total": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Total",
+          "type": "number"
+        },
+        "total_penalty": {
+          "title": "Total Penalty",
+          "type": "number"
+        }
+      },
+      "required": [
+        "score_version",
+        "formula",
+        "components",
+        "penalties",
+        "gross",
+        "total_penalty",
+        "total",
+        "priority"
+      ],
+      "title": "ScoreBreakdown",
+      "type": "object"
+    },
+    "ScoreComponent": {
+      "additionalProperties": false,
+      "properties": {
+        "component_id": {
+          "title": "Component Id",
+          "type": "string"
+        },
+        "contribution": {
+          "title": "Contribution",
+          "type": "number"
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "weight": {
+          "title": "Weight",
+          "type": "number"
+        }
+      },
+      "required": [
+        "component_id",
+        "weight",
+        "value",
+        "contribution",
+        "source",
+        "rationale"
+      ],
+      "title": "ScoreComponent",
+      "type": "object"
+    },
+    "SignalFamily": {
+      "enum": [
+        "demand",
+        "serp",
+        "gerp"
+      ],
+      "title": "SignalFamily",
+      "type": "string"
+    },
+    "ValueState": {
+      "enum": [
+        "OBSERVED_ZERO",
+        "OBSERVED_VALUE",
+        "NOT_COLLECTED",
+        "PROVIDER_ERROR",
+        "PARSING_FAILED",
+        "NOT_APPLICABLE",
+        "SUPPRESSED_BY_POLICY",
+        "INSUFFICIENT_SAMPLE"
+      ],
+      "title": "ValueState",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "admission": {
+      "$ref": "#/$defs/AdmissionOutcome",
+      "default": "PENDING"
+    },
+    "admission_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Admission Reason"
+    },
+    "attribute_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Attribute Ids",
+      "type": "array"
+    },
+    "brand_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Brand Id"
+    },
+    "candidate_id": {
+      "title": "Candidate Id",
+      "type": "string"
+    },
+    "condition_trace": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Condition Trace",
+      "type": "array"
+    },
+    "counter_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Counter Evidence Ids",
+      "type": "array"
+    },
+    "counter_evidence_notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Counter Evidence Notes",
+      "type": "array"
+    },
+    "counter_evidence_status": {
+      "$ref": "#/$defs/CounterEvidenceStatus",
+      "default": "NOT_RUN"
+    },
+    "counter_evidence_strength": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Counter Evidence Strength"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "data_quality_status": {
+      "$ref": "#/$defs/DataQualityStatus",
+      "default": "PASSED"
+    },
+    "domain_pack": {
+      "title": "Domain Pack",
+      "type": "string"
+    },
+    "domain_pack_version": {
+      "title": "Domain Pack Version",
+      "type": "string"
+    },
+    "entity_ambiguity_rate": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Entity Ambiguity Rate"
+    },
+    "freshness_days": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Freshness Days"
+    },
+    "freshness_policy_days": {
+      "title": "Freshness Policy Days",
+      "type": "integer"
+    },
+    "gap_family": {
+      "title": "Gap Family",
+      "type": "string"
+    },
+    "gate_results": {
+      "items": {
+        "$ref": "#/$defs/GateResult"
+      },
+      "title": "Gate Results",
+      "type": "array"
+    },
+    "market": {
+      "title": "Market",
+      "type": "string"
+    },
+    "metrics": {
+      "additionalProperties": {
+        "discriminator": {
+          "mapping": {
+            "measured": "#/$defs/MeasuredValue",
+            "proportion": "#/$defs/Proportion"
+          },
+          "propertyName": "kind"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/MeasuredValue"
+          },
+          {
+            "$ref": "#/$defs/Proportion"
+          }
+        ]
+      },
+      "title": "Metrics",
+      "type": "object"
+    },
+    "need_id": {
+      "title": "Need Id",
+      "type": "string"
+    },
+    "need_label": {
+      "title": "Need Label",
+      "type": "string"
+    },
+    "observed_signal_families": {
+      "items": {
+        "$ref": "#/$defs/SignalFamily"
+      },
+      "title": "Observed Signal Families",
+      "type": "array"
+    },
+    "rule_id": {
+      "title": "Rule Id",
+      "type": "string"
+    },
+    "rule_set_id": {
+      "title": "Rule Set Id",
+      "type": "string"
+    },
+    "rule_version": {
+      "title": "Rule Version",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "gap_candidate_v1",
+      "default": "gap_candidate_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "score": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ScoreBreakdown"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "score_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Score Version"
+    },
+    "signal_families": {
+      "items": {
+        "$ref": "#/$defs/SignalFamily"
+      },
+      "title": "Signal Families",
+      "type": "array"
+    },
+    "supporting_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supporting Evidence Ids",
+      "type": "array"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    }
+  },
+  "required": [
+    "candidate_id",
+    "run_id",
+    "domain_pack",
+    "domain_pack_version",
+    "rule_set_id",
+    "rule_id",
+    "rule_version",
+    "gap_family",
+    "market",
+    "need_id",
+    "need_label",
+    "signal_families",
+    "freshness_policy_days"
+  ],
+  "title": "GapCandidate",
+  "type": "object"
+}

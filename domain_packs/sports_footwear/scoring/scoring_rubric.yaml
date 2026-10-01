@@ -1,0 +1,23 @@
+# Hidden-opportunity score (spec 9.5). Weights are starting defaults to be calibrated with HKTDC
+# stakeholders against labelled analyst decisions; they are versioned with the rubric.
+score_version: score-v1.0.0
+owner: domain-product-owner-footwear
+weights:
+  demand_strength: 0.30
+  serp_supply_gap: 0.20
+  gerp_recommendation_gap: 0.20
+  strategic_relevance: 0.15
+  feasibility: 0.10
+  evidence_confidence: 0.05
+penalties:
+- {penalty_id: stale_evidence, label: Stale evidence, amount: 0.10, condition: {metric: quality.freshness_ratio, op: ">", value: 1.0}}
+- {penalty_id: low_sample, label: Low sample size, amount: 0.06, condition: {metric: quality.min_sample_n, op: "<", value: 10}}
+- {penalty_id: cross_run_instability, label: High cross-run instability, amount: 0.05, condition: {metric: gerp.stability, op: "<", value: 0.6}}
+- {penalty_id: entity_ambiguity, label: Unresolved entity ambiguity, amount: 0.04, condition: {metric: quality.entity_ambiguity_rate, op: ">", value: 0.05}}
+- {penalty_id: strong_counter_evidence, label: Strong counter-evidence, amount: 0.10, condition: {metric: counter.strength, op: ">=", value: 0.5}}
+- {penalty_id: market_size_uncertainty, label: Market-size uncertainty (partial demand coverage), amount: 0.05, condition: {metric: demand.coverage, op: "<", value: 1.0}}
+- {penalty_id: regulatory_concern, label: Regulatory or safety concern (health claims), amount: 0.05, condition: {metric: need.regulatory_flag, op: ">=", value: 1}}
+- {penalty_id: concentration_illusion, label: Concentration illusion from thin provider coverage, amount: 0.03, condition: {metric: serp.brand_mentions, op: "<", value: 5}}
+priority_thresholds:
+  high: 0.62
+  medium: 0.45

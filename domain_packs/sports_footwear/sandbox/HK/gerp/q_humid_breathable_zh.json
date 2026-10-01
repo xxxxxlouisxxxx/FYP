@@ -1,0 +1,51 @@
+{
+ "query_id": "q_humid_breathable_zh",
+ "market": "HK",
+ "answers": [
+  {
+   "repeat_index": 0,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "香港夏天濕熱，透氣跑鞋最推薦 ASICS Gel-Nimbus 26。亦可考慮 Li-Ning 赤兔 7。",
+   "citations": [
+    "https://lihkg.com/透氣跑鞋-夏天-討論---lihkg"
+   ]
+  },
+  {
+   "repeat_index": 1,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "夏天跑步宜選擇網布鞋面及快乾物料的跑鞋，並避免防水鞋款。Nike 及 ASICS 都有相關型號。",
+   "citations": [
+    "https://lihkg.com/透氣跑鞋-夏天-討論---lihkg"
+   ]
+  },
+  {
+   "repeat_index": 2,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "透氣跑鞋方面，最推薦 ASICS Gel-Nimbus 26。另一個不錯的選擇是 Mizuno Wave Rider 28。",
+   "citations": [
+    "https://lihkg.com/透氣跑鞋-夏天-討論---lihkg"
+   ]
+  },
+  {
+   "repeat_index": 3,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "香港夏天濕熱，透氣跑鞋最推薦 ASICS Gel-Nimbus 26。亦可考慮 Li-Ning 赤兔 7。",
+   "citations": [
+    "https://lihkg.com/透氣跑鞋-夏天-討論---lihkg"
+   ]
+  },
+  {
+   "repeat_index": 4,
+   "model_id": "recorded-gerp-2026-09",
+   "recorded_at": "2026-09-28 03:12:44 +00:00",
+   "answer_text": "夏天跑步宜選擇網布鞋面及快乾物料的跑鞋，並避免防水鞋款。Nike 及 ASICS 都有相關型號。",
+   "citations": [
+    "https://lihkg.com/透氣跑鞋-夏天-討論---lihkg"
+   ]
+  }
+ ]
+}

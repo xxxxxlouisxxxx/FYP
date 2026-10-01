@@ -1,0 +1,40 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 1,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-05b1790ce21d",
+   "status_code": 40501,
+   "status_message": "Invalid Field: 'keyword'. Blocked by provider content policy.",
+   "time": "1.7011 sec.",
+   "cost": 0,
+   "result_count": 0,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "vegan running shoes",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": null
+  }
+ ]
+}

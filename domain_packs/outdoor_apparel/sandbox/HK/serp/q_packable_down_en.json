@@ -1,0 +1,188 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-e4d652614adc",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "packable down jacket for travel",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "packable down jacket for travel",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=packable-down-jacket-for-travel",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 10,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "www.chamonix.com.hk",
+       "title": "Uniqlo Ultra Light Down Packable Down Jacket",
+       "url": "https://www.chamonix.com.hk/uniqlo-ultra-light-down-packable-down-jacket",
+       "description": "Shop the Uniqlo Ultra Light Down with packable down insulation that stuffs into its own pocket.",
+       "breadcrumb": "https://www.chamonix.com.hk › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Any packable down jackets for travel? - LIHKG",
+       "url": "https://lihkg.com/any-packable-down-jackets-for-travel----lihkg",
+       "description": "Hikers in Hong Kong say local shops have few packable down jackets for travel.",
+       "breadcrumb": "https://lihkg.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.montbell.com",
+       "title": "Montbell Plasma 1000 Packable Down Jacket",
+       "url": "https://www.montbell.com/montbell-plasma-1000-packable-down-jacket",
+       "description": "Shop the Montbell Plasma 1000 with packable down insulation that stuffs into its own pocket.",
+       "breadcrumb": "https://www.montbell.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 4,
+       "position": "left",
+       "domain": "www.outdoorgearlab.com",
+       "title": "The Best Packable Down Jackets For Travel | OutdoorGearLab",
+       "url": "https://www.outdoorgearlab.com/the-best-packable-down-jackets-for-travel---outdoorgearlab",
+       "description": "We tested packable down jackets for travel side by side.",
+       "breadcrumb": "https://www.outdoorgearlab.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "Patagonia Down Sweater Packable Down Jacket",
+       "url": "https://www.hktvmall.com/patagonia-down-sweater-packable-down-jacket",
+       "description": "Shop the Patagonia Down Sweater with packable down insulation that stuffs into its own pocket.",
+       "breadcrumb": "https://www.hktvmall.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.arcteryx.com",
+       "title": "Arc'teryx Cerium Packable Down Jacket",
+       "url": "https://www.arcteryx.com/arc-teryx-cerium-packable-down-jacket",
+       "description": "Shop the Arc'teryx Cerium with packable down insulation that stuffs into its own pocket.",
+       "breadcrumb": "https://www.arcteryx.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.protrek.com.hk",
+       "title": "The North Face Aconcagua Packable Down Jacket",
+       "url": "https://www.protrek.com.hk/the-north-face-aconcagua-packable-down-jacket",
+       "description": "Shop the The North Face Aconcagua with packable down insulation that stuffs into its own pocket.",
+       "breadcrumb": "https://www.protrek.com.hk › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.uniqlo.com",
+       "title": "Uniqlo Ultra Light Down Packable Down Jacket",
+       "url": "https://www.uniqlo.com/uniqlo-ultra-light-down-packable-down-jacket",
+       "description": "Shop the Uniqlo Ultra Light Down with packable down insulation that stuffs into its own pocket.",
+       "breadcrumb": "https://www.uniqlo.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.zalora.com.hk",
+       "title": "Montbell Plasma 1000 Packable Down Jacket",
+       "url": "https://www.zalora.com.hk/montbell-plasma-1000-packable-down-jacket",
+       "description": "Shop the Montbell Plasma 1000 with packable down insulation that stuffs into its own pocket.",
+       "breadcrumb": "https://www.zalora.com.hk › outdoor",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.patagonia.com",
+       "title": "Patagonia Down Sweater Packable Down Jacket",
+       "url": "https://www.patagonia.com/patagonia-down-sweater-packable-down-jacket",
+       "description": "Shop the Patagonia Down Sweater with packable down insulation that stuffs into its own pocket.",
+       "breadcrumb": "https://www.patagonia.com › outdoor",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

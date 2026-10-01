@@ -1,0 +1,23 @@
+version: 1.0.0
+markets:
+- code: HK
+  name: Hong Kong
+  enabled: true
+  locales:
+  - locale: en-HK
+    language: en
+    provider_language_code: en
+  default_language: en
+  devices: [mobile, desktop]
+  default_device: mobile
+  provider_location_code: 2344
+  currency: HKD
+  timezone: Asia/Hong_Kong
+  freshness_policy_days: 30
+  demand_reference_volume: 4000
+  tiers:
+    A:
+      description: Core hiking and travel apparel needs, English, 3 GERP repeats
+      query_sets: [core]
+      gerp_repeats: 3
+      max_budget_usd: 5.0

@@ -1,0 +1,120 @@
+{
+  "$defs": {
+    "ReviewAction": {
+      "enum": [
+        "SUBMIT_FOR_REVIEW",
+        "APPROVE",
+        "WATCHLIST",
+        "REJECT",
+        "REOPEN"
+      ],
+      "title": "ReviewAction",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "$ref": "#/$defs/ReviewAction"
+    },
+    "decided_at": {
+      "format": "date-time",
+      "title": "Decided At",
+      "type": "string"
+    },
+    "decision_id": {
+      "title": "Decision Id",
+      "type": "string"
+    },
+    "from_status": {
+      "title": "From Status",
+      "type": "string"
+    },
+    "owner_assigned": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Owner Assigned"
+    },
+    "proposed_action": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Proposed Action"
+    },
+    "rationale": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Rationale"
+    },
+    "resource_id": {
+      "title": "Resource Id",
+      "type": "string"
+    },
+    "resource_type": {
+      "default": "opportunity_card",
+      "title": "Resource Type",
+      "type": "string"
+    },
+    "reviewer": {
+      "minLength": 2,
+      "title": "Reviewer",
+      "type": "string"
+    },
+    "reviewer_role": {
+      "title": "Reviewer Role",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "review_decision_v1",
+      "default": "review_decision_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "to_status": {
+      "title": "To Status",
+      "type": "string"
+    },
+    "trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Trace Id"
+    }
+  },
+  "required": [
+    "resource_id",
+    "action",
+    "from_status",
+    "to_status",
+    "reviewer",
+    "reviewer_role"
+  ],
+  "title": "ReviewDecision",
+  "type": "object"
+}

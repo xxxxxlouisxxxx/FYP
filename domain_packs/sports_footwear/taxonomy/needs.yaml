@@ -1,0 +1,87 @@
+version: 1.0.0
+# strategic_relevance: HKTDC relevance (sourcing, trade-fair and supplier-discovery potential), 0-1.
+# feasibility: ability of HK / Asian suppliers to address the need, 0-1. Reviewed by domain stewards.
+needs:
+- need_id: fit_and_comfort
+  label: {en: Fit and comfort, zh-Hant: 合腳與舒適}
+  intent_class: parent
+  strategic_relevance: 0.5
+  feasibility: 0.5
+- need_id: wide_toe_box
+  parent: fit_and_comfort
+  label: {en: Wide toe box / wide-fit running shoes, zh-Hant: 闊楦跑鞋}
+  intent_class: commercial_investigation
+  attributes: [wide_fit, wide_toe_box]
+  match_terms: [wide toe box, wide fit, wide, 2E, 4E, 闊楦, 寬鞋頭]
+  strategic_relevance: 0.8
+  feasibility: 0.85
+  description: Runners with wide feet looking for wide lasts and roomy toe boxes.
+- need_id: humid_breathable
+  parent: fit_and_comfort
+  label: {en: Breathable shoes for hot and humid climates, zh-Hant: 濕熱天氣透氣跑鞋}
+  intent_class: commercial_investigation
+  attributes: [breathable_upper, quick_dry]
+  match_terms: [breathable, humid, ventilated, quick-dry, 透氣]
+  strategic_relevance: 0.85
+  feasibility: 0.8
+  description: Shoes that stay cool and dry in tropical and sub-tropical Asian summers.
+- need_id: plantar_fasciitis
+  parent: fit_and_comfort
+  label: {en: Running shoes for plantar fasciitis, zh-Hant: 足底筋膜炎跑鞋}
+  intent_class: problem_solving
+  attributes: [arch_support, max_cushioning]
+  match_terms: [plantar fasciitis, heel pain, arch support]
+  strategic_relevance: 0.6
+  feasibility: 0.6
+  regulatory_flags: [health_claim]
+  description: Consumers managing heel pain; product claims must avoid unsubstantiated medical language.
+- need_id: performance_racing
+  label: {en: Performance and racing, zh-Hant: 競速}
+  intent_class: parent
+  strategic_relevance: 0.5
+  feasibility: 0.5
+- need_id: carbon_plate_racing
+  parent: performance_racing
+  label: {en: Carbon-plate marathon racing shoes, zh-Hant: 碳板馬拉松跑鞋}
+  intent_class: commercial
+  attributes: [carbon_plate, lightweight]
+  match_terms: [carbon plate, carbon-plated, super shoe, racing]
+  strategic_relevance: 0.5
+  feasibility: 0.4
+- need_id: heavy_runner
+  parent: fit_and_comfort
+  label: {en: Running shoes for heavier runners, zh-Hant: 大體重跑手跑鞋}
+  intent_class: commercial_investigation
+  attributes: [max_cushioning, stability]
+  match_terms: [heavy runners, heavier runners, max cushion, maximum cushioning, stability]
+  strategic_relevance: 0.7
+  feasibility: 0.75
+- need_id: trail_waterproof
+  label: {en: Waterproof trail running shoes, zh-Hant: 防水越野跑鞋}
+  intent_class: commercial
+  attributes: [waterproof, trail_grip]
+  match_terms: [waterproof, GORE-TEX, GTX, trail]
+  strategic_relevance: 0.6
+  feasibility: 0.6
+- need_id: vegan_sustainable
+  label: {en: Vegan and sustainable running shoes, zh-Hant: 純素環保跑鞋}
+  intent_class: commercial_investigation
+  attributes: [vegan_materials, recycled_materials]
+  match_terms: [vegan, animal-free, recycled, sustainable]
+  strategic_relevance: 0.75
+  feasibility: 0.7
+- need_id: budget_beginner
+  label: {en: Budget running shoes for beginners, zh-Hant: 入門平價跑鞋}
+  intent_class: commercial
+  attributes: [budget_price]
+  match_terms: [budget, affordable, beginner, cheap, value]
+  strategic_relevance: 0.7
+  feasibility: 0.9
+- need_id: flat_feet_stability
+  parent: fit_and_comfort
+  label: {en: Stability shoes for flat feet, zh-Hant: 扁平足穩定跑鞋}
+  intent_class: problem_solving
+  attributes: [stability, arch_support]
+  match_terms: [flat feet, stability, overpronation, arch support]
+  strategic_relevance: 0.65
+  feasibility: 0.7

@@ -1,0 +1,204 @@
+{
+ "version": "0.1.20260901",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "1.8412 sec.",
+ "cost": 0.002,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "09281012-1535-0139-0000-f619c5fb7d9d",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.7011 sec.",
+   "cost": 0.002,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "serp",
+    "google",
+    "organic",
+    "live",
+    "advanced"
+   ],
+   "data": {
+    "api": "serp",
+    "function": "live",
+    "se": "google",
+    "se_type": "organic",
+    "keyword": "wide toe box running shoes",
+    "location_code": 2344,
+    "language_code": "en",
+    "device": "mobile",
+    "os": "android",
+    "depth": 10
+   },
+   "result": [
+    {
+     "keyword": "wide toe box running shoes",
+     "type": "organic",
+     "se_domain": "google.com.hk",
+     "location_code": 2344,
+     "language_code": "en",
+     "check_url": "https://www.google.com.hk/search?q=wide-toe-box-running-shoes",
+     "datetime": "2026-09-28 03:12:44 +00:00",
+     "spell": null,
+     "item_types": [
+      "organic",
+      "people_also_ask"
+     ],
+     "se_results_count": 1250000,
+     "items_count": 11,
+     "items": [
+      {
+       "type": "organic",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "domain": "lihkg.com",
+       "title": "Any wide toe box running shoes recommendations? - LIHKG",
+       "url": "https://lihkg.com/any-wide-toe-box-running-shoes-recommendations----lihkg",
+       "description": "Thread: runners in Hong Kong discuss wide toe box running shoes; most replies say local shops have few options.",
+       "breadcrumb": "https://lihkg.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 2,
+       "rank_absolute": 2,
+       "position": "left",
+       "domain": "www.hktvmall.com",
+       "title": "Altra Torin 7 Wide Toe Box Running Shoe",
+       "url": "https://www.hktvmall.com/altra-torin-7-wide-toe-box-running-shoe",
+       "description": "Shop the Altra Torin 7 with a roomy wide toe box and 2E/4E widths. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.hktvmall.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 3,
+       "rank_absolute": 3,
+       "position": "left",
+       "domain": "www.runrepeat.com",
+       "title": "Best Wide Toe Box Running Shoes (2026) | RunRepeat",
+       "url": "https://www.runrepeat.com/best-wide-toe-box-running-shoes--2026----runrepeat",
+       "description": "Lab-tested guide to wide toe box running shoes with measurements and scores.",
+       "breadcrumb": "https://www.runrepeat.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "people_also_ask",
+       "rank_group": 1,
+       "rank_absolute": 4,
+       "items": [
+        {
+         "type": "people_also_ask_element",
+         "title": "What are the best wide toe box running shoes?"
+        },
+        {
+         "type": "people_also_ask_element",
+         "title": "Where can I buy wide toe box running shoes in Hong Kong?"
+        }
+       ]
+      },
+      {
+       "type": "organic",
+       "rank_group": 4,
+       "rank_absolute": 5,
+       "position": "left",
+       "domain": "www.newbalance.com",
+       "title": "New Balance Fresh Foam X 880v14 Wide Wide Toe Box Running Shoe",
+       "url": "https://www.newbalance.com/new-balance-fresh-foam-x-880v14-wide-wide-toe-box-running-sh",
+       "description": "Shop the New Balance Fresh Foam X 880v14 Wide with a roomy wide toe box and 2E/4E widths. Free delivery in Hong Kong.",
+       "breadcrumb": "https://www.newbalance.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 5,
+       "rank_absolute": 6,
+       "position": "left",
+       "domain": "www.hk01.com",
+       "title": "Runners in Hong Kong struggle to find wide toe box running shoes",
+       "url": "https://www.hk01.com/runners-in-hong-kong-struggle-to-find-wide-toe-box-running-s",
+       "description": "Local runners say choice of wide toe box running shoes is limited.",
+       "breadcrumb": "https://www.hk01.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 6,
+       "rank_absolute": 7,
+       "position": "left",
+       "domain": "www.runnersworld.com",
+       "title": "Best Wide Toe Box Running Shoes (2026) | Runner's World",
+       "url": "https://www.runnersworld.com/best-wide-toe-box-running-shoes--2026----runner-s-world",
+       "description": "Our editors pick wide toe box running shoes after testing.",
+       "breadcrumb": "https://www.runnersworld.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 7,
+       "rank_absolute": 8,
+       "position": "left",
+       "domain": "www.reddit.com",
+       "title": "Wide toe box running shoes - reddit",
+       "url": "https://www.reddit.com/wide-toe-box-running-shoes---reddit",
+       "description": "Discussion thread with 120 comments.",
+       "breadcrumb": "https://www.reddit.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 8,
+       "rank_absolute": 9,
+       "position": "left",
+       "domain": "www.healthline.com",
+       "title": "How to choose wide toe box running shoes",
+       "url": "https://www.healthline.com/how-to-choose-wide-toe-box-running-shoes",
+       "description": "Expert tips on fit, cushioning and when to see a specialist.",
+       "breadcrumb": "https://www.healthline.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 9,
+       "rank_absolute": 10,
+       "position": "left",
+       "domain": "www.believeintherun.com",
+       "title": "Best Wide Toe Box Running Shoes (2026) - Believe in the Run",
+       "url": "https://www.believeintherun.com/best-wide-toe-box-running-shoes--2026----believe-in-the-run",
+       "description": "Detailed reviews and comparisons.",
+       "breadcrumb": "https://www.believeintherun.com › running",
+       "is_image": false,
+       "is_video": false
+      },
+      {
+       "type": "organic",
+       "rank_group": 10,
+       "rank_absolute": 11,
+       "position": "left",
+       "domain": "www.nike.com",
+       "title": "Men's Running Shoes | Nike Hong Kong",
+       "url": "https://www.nike.com/men-s-running-shoes---nike-hong-kong",
+       "description": "Explore the latest collection of running shoes.",
+       "breadcrumb": "https://www.nike.com › running",
+       "is_image": false,
+       "is_video": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
